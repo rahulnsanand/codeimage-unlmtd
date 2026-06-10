@@ -10,6 +10,7 @@ import {scaffoldVars} from '../../../components/Scaffold/Scaffold.css';
 import {Sidebar} from '../../../components/Scaffold/Sidebar/Sidebar';
 import {PresetSwitcher} from '../../../components/Presets/PresetSwitcher/PresetSwitcher';
 import type {AppLocaleEntries} from '../../../i18n';
+import {ImportFileButton} from '../../../components/Toolbar/ImportFileButton';
 
 export function EditorLeftSidebar() {
   const [toggle, setToggle] = createSignal(false);
@@ -19,7 +20,7 @@ export function EditorLeftSidebar() {
     <>
       <Sidebar>
         <EditorForm>
-          <Box marginTop={3}>
+          <Box marginTop={3} display={'flex'} flexDirection={'column'} style={{'row-gap': '12px'}}>
             <Button
               theme={'secondary'}
               block
@@ -29,7 +30,9 @@ export function EditorLeftSidebar() {
             >
               {t('presets.openPreset.label')}
             </Button>
+            <ImportFileButton />
           </Box>
+
           <EditorSidebar />
         </EditorForm>
       </Sidebar>

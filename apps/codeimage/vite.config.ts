@@ -96,9 +96,6 @@ const config: UserConfigExport = defineConfig(({mode}) => ({
       '@codemirror/view',
       '@codemirror/language',
       '@mswjs/data',
-      'downloadjs',
-      'seedrandom',
-      '@ngneat/falso > seedrandom',
       // Pre-bundle every CJS sub-dependency of @vanilla-extract/css so the
       // browser gets proper ESM default exports without duplicating VE itself.
       '@vanilla-extract/css > cssesc',

@@ -124,24 +124,7 @@ export const WindowStyleForm: ParentComponent = () => {
         </TwoColumnPanelRow>
       </PanelRow>
 
-      <PanelRow for={'frameShowWatermarkField'} label={t('frame.watermark')}>
-        <TwoColumnPanelRow>
-          <SuspenseEditorItem
-            fallback={<SkeletonLine width={'100%'} height={'24px'} />}
-          >
-            <SegmentedField
-              size={'xs'}
-              adapt
-              value={terminal.state.showWatermark}
-              onChange={terminal.setShowWatermark}
-              items={[
-                {label: t('common.show'), value: true},
-                {label: t('common.hide'), value: false},
-              ]}
-            />
-          </SuspenseEditorItem>
-        </TwoColumnPanelRow>
-      </PanelRow>
+
       <PanelRow for={'frameSelectShadow'} label={t('frame.shadow')}>
         <TwoColumnPanelRow>
           <SuspenseEditorItem

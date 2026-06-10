@@ -21,7 +21,6 @@
     "@mdx-js/mdx": "catalog:next",
     "@mdx-js/rollup": "catalog:next",
     "@mswjs/data": "^0.16.2",
-    "@types/downloadjs": "^1.4.6",
     "@types/mdx": "2.0.14",
     "@vanilla-extract/vite-plugin": "^5.2.2",
     "cross-env": "^10.1.0",

@@ -67,6 +67,15 @@ export const locale = {
       genericSaveError: 'Si è verificato un errore durante il salvataggio',
       quality: 'Qualità',
     },
+    importFile: {
+      label: 'Importa file',
+      title: 'Importa da file',
+      privacyNotice: 'I tuoi file di codice non lasciano mai il browser',
+      dropLabel: 'Trascina qui un file di codice',
+      browseLabel: 'oppure clicca per selezionarlo',
+      unsupportedExtension: 'Questo tipo di file non è supportato',
+      invalidFile: 'Impossibile leggere questo file',
+    },
     shortcut: {
       esc: 'Esc',
       buttonAction: 'Scorciatoie tastiera',
@@ -153,6 +162,15 @@ export const locale = {
       noOpacitySupportedWithThisExtension:
         'The custom transparency is not compatible with this extension',
       quality: 'Quality',
+    },
+    importFile: {
+      label: 'Import file',
+      title: 'Import from file',
+      privacyNotice: 'Your code files never leave your browser',
+      dropLabel: 'Drag & drop a code file here',
+      browseLabel: 'or click to browse',
+      unsupportedExtension: 'This file type is not supported',
+      invalidFile: 'Unable to read this file',
     },
     shortcut: {
       esc: 'Esc',
@@ -241,6 +259,15 @@ export const locale = {
         'Die benutzerdefinierte Transparenz ist mit dieser Erweiterung nicht kompatibel',
       quality: 'Qualität',
     },
+    importFile: {
+      label: 'Datei importieren',
+      title: 'Aus Datei importieren',
+      privacyNotice: 'Deine Code-Dateien verlassen niemals deinen Browser',
+      dropLabel: 'Code-Datei hierher ziehen',
+      browseLabel: 'oder klicken zum Auswählen',
+      unsupportedExtension: 'Dieser Dateityp wird nicht unterstützt',
+      invalidFile: 'Diese Datei kann nicht gelesen werden',
+    },
     shortcut: {
       esc: 'Esc',
       buttonAction: 'Tastatürkürzel',
@@ -326,6 +353,15 @@ export const locale = {
       pixelRatio: 'Escala',
       genericSaveError: 'Se produjo un error al guardar',
       quality: 'Calidad',
+    },
+    importFile: {
+      label: 'Importar archivo',
+      title: 'Importar desde archivo',
+      privacyNotice: 'Tus archivos de código nunca salen de tu navegador',
+      dropLabel: 'Arrastra aquí un archivo de código',
+      browseLabel: 'o haz clic para seleccionarlo',
+      unsupportedExtension: 'Este tipo de archivo no es compatible',
+      invalidFile: 'No se pudo leer este archivo',
     },
     shortcut: {
       esc: 'Esc',

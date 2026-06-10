@@ -88,10 +88,7 @@ export function KeyboardShortcuts(): JSXElement {
       if (filterHotKey()) return;
       terminal.toggleShowHeader();
     },
-    W: () => {
-      if (filterHotKey()) return;
-      terminal.toggleWatermark();
-    },
+
     // ATTENTION: does it work for all keyboards? https://github.com/jamiebuilds/tinykeys/issues/155
     'Shift+?': () => {
       if (filterHotKey()) return;

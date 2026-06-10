@@ -24,7 +24,7 @@ export function getInitialTerminalState(): TerminalState {
     background: '',
     // lazy initialization
     textColor: '',
-    showWatermark: true,
+
     showGlassReflection: false,
     borderType: 'glass',
     opacity: 100,
@@ -40,11 +40,9 @@ export function createTerminalState() {
       setAccentVisible: boolean;
       setShowHeader: boolean;
       setShowGlassReflection: boolean;
-      setShowWatermark: boolean;
       setOpacity: number;
       setAlternativeTheme: boolean;
       toggleShowHeader: void;
-      toggleWatermark: void;
       setFromPersistedState: PersistedTerminalState;
       setFromPreset: PresetData['terminal'];
       // eslint-disable-next-line @typescript-eslint/ban-types
@@ -67,10 +65,6 @@ export function createTerminalState() {
       store.commands.setShowGlassReflection,
       (showGlassReflection, {state}) => ({...state, showGlassReflection}),
     )
-    .hold(store.commands.setShowWatermark, (showWatermark, {state}) => ({
-      ...state,
-      showWatermark,
-    }))
     .hold(store.commands.setOpacity, (opacity, {state}) => ({
       ...state,
       opacity,
@@ -85,10 +79,6 @@ export function createTerminalState() {
         showHeader: !state.showHeader,
       };
     })
-    .hold(store.commands.toggleWatermark, (_, {state}) => ({
-      ...state,
-      showWatermark: !state.showWatermark,
-    }))
     .hold(store.commands.setFromPreset, presetData => {
       store.set(state => ({...state, ...presetData}));
     })
@@ -109,7 +99,7 @@ export function createTerminalState() {
     return {
       alternativeTheme: state.alternativeTheme,
       showGlassReflection: state.showGlassReflection,
-      showWatermark: state.showWatermark,
+
       textColor: state.textColor,
       background: state.background,
       opacity: state.opacity,
@@ -130,9 +120,7 @@ export function createTerminalState() {
       store.commands.setType,
       store.commands.setShowGlassReflection,
       store.commands.setShowHeader,
-      store.commands.setShowWatermark,
       store.commands.toggleShowHeader,
-      store.commands.toggleWatermark,
       store.commands.setBorder,
       store.commands.setFromPreset,
     ]),

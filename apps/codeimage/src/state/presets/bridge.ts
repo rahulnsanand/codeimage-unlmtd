@@ -57,7 +57,7 @@ export const withPresetBridge = (idbKey: string) =>
             showGlassReflection: terminalState.showGlassReflection,
             type: terminalState.type,
             showHeader: terminalState.showHeader,
-            showWatermark: terminalState.showWatermark,
+
             textColor: terminalState.textColor,
             borderType: terminalState.borderType,
           },

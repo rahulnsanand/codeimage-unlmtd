@@ -103,10 +103,4 @@ export const header = style({
   },
 });
 
-export const watermark = style({
-  position: 'absolute',
-  right: '6px',
-  bottom: '-6px',
-  opacity: 0.35,
-  backgroundColor: 'inherit',
-});
+

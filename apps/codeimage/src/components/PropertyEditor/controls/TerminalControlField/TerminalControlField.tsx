@@ -63,7 +63,7 @@ export function TerminalControlField(
                 accentVisible={props.showAccent}
                 readonlyTab={true}
                 showHeader={true}
-                showWatermark={false}
+
                 alternativeTheme={false}
                 opacity={100}
                 themeId={editorState.options.themeId}
@@ -99,7 +99,7 @@ export function TerminalControlField(
                   accentVisible={props.showAccent}
                   readonlyTab={true}
                   showHeader={true}
-                  showWatermark={false}
+
                   alternativeTheme={false}
                   opacity={100}
                   themeId={editorState.options.themeId}

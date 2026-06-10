@@ -49,7 +49,7 @@ export interface TerminalState {
   shadow: string | null;
   background: string;
   textColor: string;
-  showWatermark: boolean;
+
   showGlassReflection: boolean;
   opacity: number;
   alternativeTheme: boolean;
@@ -65,7 +65,7 @@ export type PersistedTerminalState = Pick<
   | 'shadow'
   | 'background'
   | 'textColor'
-  | 'showWatermark'
+
   | 'showGlassReflection'
   | 'opacity'
   | 'alternativeTheme'

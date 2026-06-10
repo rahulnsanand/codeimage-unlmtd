@@ -204,8 +204,4 @@ export const resizeLineDivider = style({
   transform: 'transformY(50%)',
 });
 
-export const watermark = style({
-  position: 'absolute',
-  right: '32px',
-  bottom: '24px',
-});
+
