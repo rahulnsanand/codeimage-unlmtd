@@ -80,7 +80,12 @@ export const ExportButton: Component<ExportButtonProps> = props => {
         size={buttonSize()}
         loading={data.loading}
         leftIcon={<DownloadIcon />}
-        onClick={() => setOpen(true)}
+        onClick={(e) => {
+          if (e.currentTarget instanceof HTMLElement) {
+            e.currentTarget.blur();
+          }
+          setOpen(true);
+        }}
       >
         {label()}
       </Button>

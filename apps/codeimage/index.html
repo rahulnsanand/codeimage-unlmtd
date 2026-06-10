@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="theme-color" />
     <meta name="apple-mobile-web-app-status-bar-style" content="dark-content" />
-    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -13,7 +13,7 @@
     />
     <link
       rel="preload"
-      href="/assets/codeimage-logo-blue-svg-v1.svg"
+      href="/assets/favicon.svg"
       as="image"
       type="image/svg+xml"
     />
@@ -30,20 +30,15 @@
         this.onload = null;
         this.removeAttribute('media');
       "
-      as="font"
       fetchpriority="low"
       crossorigin
     />
 
     <link
       href="/assets/fonts/geist_mono/GeistMono[wght].ttf"
-      rel="stylesheet"
-      media="print"
-      onload="
-        this.onload = null;
-        this.removeAttribute('media');
-      "
+      rel="preload"
       as="font"
+      type="font/ttf"
       fetchpriority="low"
       crossorigin
     />
@@ -87,7 +82,7 @@
       content="CodeImage is the newest tool to help developers to manage their snippets and create beautiful screenshots of their source code"
     />
     <link rel="apple-touch-icon" href="/pwa/apple-icon-180.png" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
 
     <style>
@@ -123,7 +118,7 @@
       <div id="launcher" class="launcher">
         <img
           width="240px"
-          src="/assets/codeimage-logo-blue-svg-v1.svg"
+          src="/assets/favicon.svg"
           alt="logo"
         />
       </div>

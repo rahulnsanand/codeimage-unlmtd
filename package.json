@@ -8,9 +8,9 @@
   "sideEffects": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/riccardoperra/codeimage"
+    "url": "https://github.com/rahulnsanand/codeimage-unlmtd"
   },
-  "bugs": "https://github.com/riccardoperra/codeimage/issues",
+  "bugs": "https://github.com/rahulnsanand/codeimage-unlmtd/issues",
   "license": "MIT",
   "keywords": [
     "solidhack",

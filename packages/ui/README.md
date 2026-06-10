@@ -1,10 +1,10 @@
 # @codeimage/ui
 
-![Latest release Version](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Friccardoperra%2Fcodeimage%2Fmain%2Fpackages%2Fui%2Fpackage.json)
+![Latest release Version](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Frahulnsanand%2Fcodeimage-unlmtd%2Fmain%2Fpackages%2Fui%2Fpackage.json)
 [![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue?style=for-the-badge)](https://github.com/solidjs/solid)
 [![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4?style=for-the-badge)](https://github.com/seek-oss/vanilla-extract)
 
-> Design system and theming for [@codeimage/app](https://github.com/riccardoperra/codeimage/tree/main/apps/codeimage)
+> Design system and theming for [@codeimage/app](https://github.com/rahulnsanand/codeimage-unlmtd/tree/main/apps/codeimage)
 
 Primitive components of CodeImage app are created from scratch or wrap the solid-headless components as a matter
 of accessibility. The style is made with vanilla-extract.

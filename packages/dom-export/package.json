@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/riccardoperra/codeimage-export.git"
+    "url": "git+https://github.com/rahulnsanand/codeimage-unlmtd.git"
   },
   "dependencies": {
     "@solid-primitives/platform": "^0.2.1",

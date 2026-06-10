@@ -1,91 +1,93 @@
-![CodeImage logo](assets/banner.png?raw=true)
+<div align="center">
+  <img src="assets/banner.png?raw=true" alt="CodeImage logo" />
 
-> Create elegant code screenshots of your source code — now with up to 16K export quality.
+  <h1>📸 CodeImage UNLMTD</h1>
 
-[![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
-[![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
-![License](https://img.shields.io/github/license/riccardoperra/codeimage)
+  <p><strong>Create elegant, high-definition code screenshots. No limits. No tracking. Pure awesomeness.</strong></p>
 
----
-
-## About This Fork
-
-This is a fork of [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra), modified to be the best, most stripped-down, no-nonsense version of the original code.
-
-### What Changed
-
-| Area | Original | This Fork |
-|---|---|---|
-| Export dialog slider | Max `3x` pixel ratio | Max `16x` pixel ratio |
-| Export settings popover | Fixed buttons: `1x / 2x / 3x / 6x` | Continuous slider: `1x → 16x` |
-| Backend & Database | Required Auth0, Prisma, Fastify | **Removed.** 100% serverless static app |
-| Data Collection | Umami analytics tracking | **Removed.** No analytics or tracking |
-
-**That's it.** Everything else — all core features, themes, editor behaviour, and state management — is untouched. It's a no-nonsense tool that does what it's supposed to do, nothing more, nothing less. It can be deployed for free on Cloudflare Pages or GitHub Pages without requiring any backend infrastructure or database limits.
-
-At a typical frame width of ~800 px, a `16x` export produces a **~12 800 px wide** image, well within the browser canvas limit of 16 384 px. The underlying export engine (`@codeimage/dom-export`) already handled the canvas safety cap; only the UI sliders were artificially limited.
+  [![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
+  [![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
+  ![License](https://img.shields.io/github/license/riccardoperra/codeimage)
+</div>
 
 ---
 
-## Original Project
+## 🌟 The UNLMTD Version
 
-[CodeImage](https://codeimage.dev) is a tool to help developers create beautiful screenshots of their code, with features for quick social media sharing.
+Welcome to **CodeImage UNLMTD**! This is a supercharged, stripped-down, and beautifully optimized fork of the amazing [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra).
 
-🏆 Winner of [SolidHack 2022](https://hack.solidjs.com) — **Best Application** category.
+We took an already fantastic tool and asked: *How can we make this lighter, faster, more secure, and completely unrestricted?* Here is what makes this codebase the ultimate version to fork, use, and trust:
 
-Original repository: [github.com/riccardoperra/codeimage](https://github.com/riccardoperra/codeimage)  
-Original author: [Riccardo Perra](https://github.com/riccardoperra)
+### 🚀 What Makes It Better?
+
+- 🖼️ **No Size Limit Restrictions:** Say goodbye to arbitrary limits! Export your code at massive resolutions with a continuous slider scaling all the way up to **16x pixel ratio** (up to ~16,384px canvas limits). Your code deserves to be crystal clear.
+- 📦 **Latest & Essential Dependencies Only:** We've ruthlessly audited and purged all unnecessary, bloated, and deprecated packages. Every dependency has been bumped to its absolute latest, most secure version. It's leaner, meaner, and faster than ever.
+- 🕵️ **Zero Data Collection:** We respect your privacy. All analytics, telemetry, and tracking (like Umami) have been completely removed. Your data is yours.
+- ☁️ **100% Serverless & Backend-Free:** We stripped out the heavy backend requirements (Auth0, Prisma, Fastify, Databases). This is a pure static frontend application.
+- 🛠️ **Fully Open Source, Forkable & Ready to Use:** Since there's no complex backend infrastructure to wire up, you can fork this repo and deploy it immediately for free on Cloudflare Pages, Vercel, or GitHub Pages.
 
 ---
 
-## Tech Stack
+## 🎨 Features You'll Love
 
-CodeImage is a pnpm monorepo split into `apps` and `packages`.
+All the core awesomeness of the original project is still here, untouched and ready to shine:
 
-### Apps
+- 💅 **Beautiful Customization:** Tweak padding, fonts, shadows, and backgrounds to make your code pop.
+- 🌗 **15+ Custom Themes:** From dark modes to vibrant colors, find the perfect aesthetic for your snippets.
+- 📱 **Responsive & Accessible:** Works beautifully across devices with an accessible UI toolkit.
+- ⚡ **Blazing Fast:** Powered by SolidJS and zero-runtime CSS (Vanilla Extract).
 
-#### [`@codeimage/app`](./apps/codeimage)
+---
 
-The front-end SPA, built entirely with SolidJS. Key dependencies:
+## 🏗️ Tech Stack
 
-- [vanilla-extract](https://github.com/seek-oss/vanilla-extract) — zero-runtime CSS-in-TypeScript
-- [CodeMirror 6](https://codemirror.net/6/) — extensible code editor
-- [StateBuilder](https://github.com/riccardoperra/statebuilder) — composable state management
-- [@codeui/kit](https://github.com/riccardoperra/codeui) — accessible UI kit built on [Kobalte](https://github.com/kobaltedev/kobalte)
-- [solid-primitives](https://github.com/solidjs-community/solid-primitives) — SolidJS primitives library
+CodeImage UNLMTD is a highly optimized `pnpm` monorepo:
 
-#### [`@codeimage/api`](./apps/api)
-
-The REST API layer built with [Fastify](https://github.com/fastify/fastify), [Prisma ORM](https://github.com/prisma/prisma), and [Auth0](https://auth0.com/).
+### Front-End App (`@codeimage/app`)
+Built entirely with SolidJS, focusing on extreme performance and minimal footprint:
+- [SolidJS](https://github.com/solidjs/solid) — Reactive, blazing fast UI framework
+- [vanilla-extract](https://github.com/seek-oss/vanilla-extract) — Zero-runtime CSS-in-TypeScript
+- [CodeMirror 6](https://codemirror.net/6/) — The extensible code editor powering the core experience
 
 ### Packages
+- `@codeimage/ui`: Accessible UI kit for the front-end
+- `@codeimage/dom-export`: Ultra-optimized export engine without artificial caps
+- `@codeimage/highlight`: Custom editor highlighting themes
+- `@codeimage/config`: Shared base configurations
 
-| Package | Description |
-|---|---|
-| [`@codeimage/ui`](./packages/ui) | UI kit for the CodeImage front-end |
-| [`@codeimage/dom-export`](./packages/dom-export) | Custom fork of [html-to-image](https://github.com/bubkoo/html-to-image) with several export fixes |
-| [`@codeimage/highlight`](./packages/highlight) | Custom editor and highlighting themes for CodeMirror |
-| [`@codeimage/locale`](./packages/locale) | Strict-typed i18n wrapper around `@solid-primitives/i18n` |
-| [`@codeimage/config`](./packages/config) | Shared base configurations and interfaces |
-| [`@codeimage/prisma-models`](./packages/prisma-models) | Prisma ORM models shared between front-end and back-end |
-| [`@codeimage/atomic-state`](./packages/atomic-state) | Small state manager with RxJS and solid-js/store utilities |
+*(Note: The old `@codeimage/api`, `@codeimage/prisma-models`, and authentication packages have been permanently removed for a pure frontend experience!)*
 
 ---
 
-## Running Locally
+## 🚀 Running Locally
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for full setup instructions.
+Getting started is insanely easy since there are no databases or backend APIs to configure!
 
 ```bash
+# 1. Install dependencies (we use pnpm!)
 pnpm install
+
+# 2. Build the local packages
 pnpm libs:build
+
+# 3. Start the dev server
 pnpm dev
 ```
 
-Open [http://localhost:4200](http://localhost:4200) in your browser.
+Open [http://localhost:4200](http://localhost:4200) in your browser and start capturing!
 
 ---
 
-## License
+## 🏆 Credits
 
-MIT © [Riccardo Perra](https://github.com/riccardoperra)
+This project wouldn't be possible without the incredible foundation laid by **Riccardo Perra**. 
+The original CodeImage won the **Best Application** category at [SolidHack 2022](https://hack.solidjs.com).
+
+- Original repository: [github.com/riccardoperra/codeimage](https://github.com/riccardoperra/codeimage)  
+- Original author: [Riccardo Perra](https://github.com/riccardoperra)
+
+---
+
+## 📄 License
+
+MIT © [Riccardo Perra](https://github.com/riccardoperra) & [Rahul Anand](https://github.com/rahulnsanand)

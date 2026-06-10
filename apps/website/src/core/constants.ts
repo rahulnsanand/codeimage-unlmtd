@@ -8,4 +8,4 @@ export const websiteDescription =
   'CodeImage is the newest tool to help developers to manage their snippets and create beautiful screenshots of their source code';
 export const websiteThemeColor = '#111111';
 export const ogImageUrl =
-  'https://github.com/riccardoperra/codeimage/blob/main/assets/codeimage_card.png?raw=true';
+  'https://github.com/rahulnsanand/codeimage-unlmtd/blob/main/assets/codeimage_card.png?raw=true';

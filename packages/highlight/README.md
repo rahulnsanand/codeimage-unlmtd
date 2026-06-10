@@ -1,10 +1,10 @@
 # @codeimage/highlight
 
-![Latest release Version](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Friccardoperra%2Fcodeimage%2Fmain%2Fpackages%2Fhighlight%2Fpackage.json)
+![Latest release Version](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Frahulnsanand%2Fcodeimage-unlmtd%2Fmain%2Fpackages%2Fhighlight%2Fpackage.json)
 [![Built with CodeMirror6](https://img.shields.io/badge/Built%20with-CodeMirror6-blue?style=for-the-badge)](https://codemirror.net/6/)
 
 > Custom CodeMirror6 editor themes
-> for [@codeimage/app](https://github.com/riccardoperra/codeimage/tree/main/apps/codeimage)
+> for [@codeimage/app](https://github.com/rahulnsanand/codeimage-unlmtd/tree/main/apps/codeimage)
 
 CodeImage editor themes are made by the internal `createTheme` api function.
 

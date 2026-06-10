@@ -20,31 +20,31 @@ export default function Footer() {
             <a
               class={`${styles.link} ${styles.onlyDesktopLink}`}
               href={
-                'https://github.com/riccardoperra/better-comments-for-github'
+                'https://github.com/rahulnsanand/codeimage-unlmtd'
               }
               target={'_blank'}
               rel={'noopener'}
-              title="Better Comments for GitHub"
+              title="CodeImage UNLMTD"
             >
-              Better Comments for GitHub
+              CodeImage UNLMTD
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/riccardoperra/codeimage'}
+              href={'https://github.com/rahulnsanand/codeimage-unlmtd'}
               title="GitHub repository"
             >
               GitHub
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/riccardoperra/codeimage/issues'}
+              href={'https://github.com/rahulnsanand/codeimage-unlmtd/issues'}
               title="Issues"
             >
               Issues & Feedback
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/riccardoperra/codeimage/releases'}
+              href={'https://github.com/rahulnsanand/codeimage-unlmtd/releases'}
               title="Releases"
             >
               Releases

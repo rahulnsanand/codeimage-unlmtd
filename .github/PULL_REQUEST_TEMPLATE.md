@@ -2,7 +2,7 @@
 
 Please check if your PR fulfills the following requirements:
 
-- [ ] The commit message follows our guidelines: https://github.com/riccardoperra/codeimage/blob/main/CONTRIBUTING.md#commit
+- [ ] The commit message follows our guidelines: https://github.com/rahulnsanand/codeimage-unlmtd/blob/main/CONTRIBUTING.md#commit
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been added / updated (for bug fixes / features)
 
