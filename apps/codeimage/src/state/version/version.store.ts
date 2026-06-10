@@ -14,8 +14,7 @@ import {
 } from 'solid-js';
 import {unwrap} from 'solid-js/store';
 import {defineStore} from 'statebuilder';
-import {Changelog} from '../../components/Changelog/Changelog';
-import {parseChangelogFilePath} from '../../components/Changelog/resolveChangelog';
+import {PrivacyReminder} from '../../components/PrivacyReminder/PrivacyReminder';
 
 interface Feature {
   name: string;
@@ -39,9 +38,7 @@ interface VersionStore {
 
 export type FeatureName = 'fontPicker' | 'windowStylePicker' | 'borderType';
 
-const ChangelogFiles = Object.keys(
-  import.meta.glob('../../../changelog/*.mdx'),
-).map(parseChangelogFilePath);
+
 
 function initialValue(): VersionStore {
   return {
@@ -108,17 +105,12 @@ export const VersionStore = defineStore<VersionStore>(initialValue)
               });
             }
             if (isFirstTime || hasNewUpdate) {
-              const fileVersions = ChangelogFiles.map(({version}) => version);
-              const hasNewVersionToSee = fileVersions.includes(data.appVersion);
-              if (isFirstTime || hasNewVersionToSee) {
-                controlledDialog(Changelog, {latest: true});
-                const updatedData = updateWithLatestVersionSeen(
-                  currentVersion,
-                  data,
-                );
-                _.set(() => updatedData);
-              } else {
-              }
+              controlledDialog(PrivacyReminder, {});
+              const updatedData = updateWithLatestVersionSeen(
+                currentVersion,
+                data,
+              );
+              _.set(() => updatedData);
             } else {
               // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               _.set(() => updateWithLatestVersionSeen(currentVersion, data!));

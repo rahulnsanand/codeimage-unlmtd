@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codeimageunlmtd.pages.dev/sitemap.xml
+
+# AI Discoverability
+Allow: /llms.txt
+Allow: /llms-full.txt

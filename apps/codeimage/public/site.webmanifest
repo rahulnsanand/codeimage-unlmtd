@@ -1,0 +1,22 @@
+{
+  "name": "CodeImage unlmtd",
+  "short_name": "CodeImage",
+  "description": "CodeImage unlmtd is the ultimate tool for developers to beautifully format, manage, and export source code snippets as high-resolution images.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/pwa/apple-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

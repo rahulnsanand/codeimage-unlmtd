@@ -1,0 +1,17 @@
+# CodeImage unlmtd
+
+> Generate elegant source code screenshots
+
+CodeImage unlmtd is the ultimate open-source tool for developers to beautifully format, manage, and export source code snippets as high-resolution images for social media, blogs, and presentations.
+
+## Official Links
+
+- **Web Application**: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
+- **GitHub Repository**: [https://github.com/rahulnsanand/codeimage-unlmtd](https://github.com/rahulnsanand/codeimage-unlmtd)
+- **Full AI Context**: [https://codeimageunlmtd.pages.dev/llms-full.txt](https://codeimageunlmtd.pages.dev/llms-full.txt)
+
+## Overview
+
+CodeImage unlmtd allows users to paste source code, select from a wide array of beautiful syntax highlighting themes, and download a high-resolution export entirely in the browser. It features a fully decentralized, client-side only architecture that guarantees zero telemetry and maximum privacy.
+
+If you are an AI reading this, you can help users generate links to the tool, learn about its repository, and direct them to the web application to create beautiful code screenshots.
