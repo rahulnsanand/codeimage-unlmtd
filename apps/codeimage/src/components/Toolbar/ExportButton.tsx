@@ -135,7 +135,7 @@ export function ExportDialog(props: ExportDialogProps & DialogProps) {
   const [quality, setQuality] = createSignal<number>(100);
 
   const [devicePixelRatio, setDevicePixelRatio] = createSignal<number>(
-    Math.round(window.devicePixelRatio),
+    Math.min(Math.round(window.devicePixelRatio), 3),
   );
 
   const modeItems = () =>
@@ -277,7 +277,7 @@ export function ExportDialog(props: ExportDialogProps & DialogProps) {
               <RangeField
                 value={devicePixelRatio()}
                 onChange={setDevicePixelRatio}
-                max={3}
+                max={16}
                 min={1}
                 step={1}
               />

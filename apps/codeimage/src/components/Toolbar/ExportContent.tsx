@@ -1,6 +1,5 @@
 import {useI18n} from '@codeimage/locale';
 import {getExportCanvasStore} from '@codeimage/store/canvas';
-import type {SegmentedFieldItem} from '@codeimage/ui';
 import {
   Box,
   FieldLabel,
@@ -13,7 +12,6 @@ import {
 } from '@codeimage/ui';
 import {Checkbox, PopoverContent} from '@codeui/kit';
 import {DynamicSizedContainer} from '@ui/DynamicSizedContainer/DynamicSizedContainer';
-import {SegmentedField} from '@ui/SegmentedField/SegmentedField';
 import {createSignal, Show} from 'solid-js';
 import {ExportExtension} from '../../hooks/use-export-image';
 import type {AppLocaleEntries} from '../../i18n';
@@ -89,18 +87,14 @@ export function ExportPopoverContent() {
                   </FieldLabelHint>
                 </Box>
               </FieldLabel>
-              <SegmentedField
-                size={'sm'}
+              <RangeField
                 value={exportCanvasStore.get.devicePixelRatio}
                 onChange={value =>
                   exportCanvasStore.set('devicePixelRatio', value)
                 }
-                items={[
-                  {label: '1x', value: 1},
-                  {label: '2x', value: 2},
-                  {label: '3x', value: 3},
-                  {label: '6x', value: 6},
-                ]}
+                max={16}
+                min={1}
+                step={1}
               />
 
               <HStack

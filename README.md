@@ -1,92 +1,88 @@
 ![CodeImage logo](assets/banner.png?raw=true)
 
-> Create elegant code screenshots of your source code.
+> Create elegant code screenshots of your source code — now with up to 16K export quality.
 
-![Latest release Version](https://img.shields.io/badge/dynamic/json?color=success&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Friccardoperra%2Fcodeimage%2Fmain%2Fpackage.json)
-![Build workflow badge](https://img.shields.io/github/actions/workflow/status/riccardoperra/codeimage/prod-deploy.yml?branch=main)
-[![Issues](https://img.shields.io/github/issues/riccardoperra/codeimage)](https://github.com/riccardoperra/codeimage/issues)
 [![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
 [![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
 ![License](https://img.shields.io/github/license/riccardoperra/codeimage)
 
-## Introduction
+---
 
-[CodeImage](https://codeimage.dev) is the newest tool to help developers to create beautiful screenshots of their code,
-providing several
-features to speed up the process to post in social media.
+## About This Fork
 
-<a href="https://www.producthunt.com/posts/codeimage?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-codeimage" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=371306&theme=light" alt="CodeImage - A&#0032;tool&#0032;to&#0032;manage&#0032;and&#0032;beautify&#0032;your&#0032;code&#0032;screenshots | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+This is a fork of [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra), modified to remove the export resolution cap and allow image exports up to **16K quality**.
 
-#### Supported by
+### What Changed
 
-<a target='_blank' href="https://jb.gg/OpenSourceSupport">
-  <img alt='Jetbrains Logo.' src="./assets/jetbrains.svg" width='200'>
-</a>
+| Area | Original | This Fork |
+|---|---|---|
+| Export dialog slider | Max `3x` pixel ratio | Max `16x` pixel ratio |
+| Export settings popover | Fixed buttons: `1x / 2x / 3x / 6x` | Continuous slider: `1x → 16x` |
+
+**That's it.** Everything else — all features, themes, editor behaviour, state management, auth, API — is untouched from the original.
+
+At a typical frame width of ~800 px, a `16x` export produces a **~12 800 px wide** image, well within the browser canvas limit of 16 384 px. The underlying export engine (`@codeimage/dom-export`) already handled the canvas safety cap; only the UI sliders were artificially limited.
 
 ---
 
-![CodeImage showcase](assets/showcase_1.png)
+## Original Project
 
-## 🤖 Tech stack
+[CodeImage](https://codeimage.dev) is a tool to help developers create beautiful screenshots of their code, with features for quick social media sharing.
 
-CodeImage architecture consist of a PNPM monorepo, currently subdivided in `packages` and `apps`.
+🏆 Winner of [SolidHack 2022](https://hack.solidjs.com) — **Best Application** category.
+
+Original repository: [github.com/riccardoperra/codeimage](https://github.com/riccardoperra/codeimage)  
+Original author: [Riccardo Perra](https://github.com/riccardoperra)
+
+---
+
+## Tech Stack
+
+CodeImage is a pnpm monorepo split into `apps` and `packages`.
 
 ### Apps
 
-#### [@codeimage/app](./apps/codeimage)
+#### [`@codeimage/app`](./apps/codeimage)
 
-The front-end application, entirely built with SolidJS.
+The front-end SPA, built entirely with SolidJS. Key dependencies:
 
-It currently also relies on these libraries:
+- [vanilla-extract](https://github.com/seek-oss/vanilla-extract) — zero-runtime CSS-in-TypeScript
+- [CodeMirror 6](https://codemirror.net/6/) — extensible code editor
+- [StateBuilder](https://github.com/riccardoperra/statebuilder) — composable state management
+- [@codeui/kit](https://github.com/riccardoperra/codeui) — accessible UI kit built on [Kobalte](https://github.com/kobaltedev/kobalte)
+- [solid-primitives](https://github.com/solidjs-community/solid-primitives) — SolidJS primitives library
 
-- [vanilla-extract](https://github.com/seek-oss/vanilla-extract): Zero-runtime Stylesheets-in-TypeScript.
-- [CodeMirror6](https://codemirror.net/6/): Extensible code editor
-- [StateBuilder](https://github.com/riccardoperra/statebuilder): Composable state management
-- [@codeui/kit](https://github.com/riccardoperra/codeui): Accessible UI Kit based
-  on [Kobalte](https://github.com/kobaltedev/kobalte)
-- [solid-primitives](https://github.com/solidjs-community/solid-primitives): SolidJS primitives library
+#### [`@codeimage/api`](./apps/api)
 
-#### [@codeimage/api](./apps/api)
-
-The REST API layer built with [Fastify](https://github.com/fastify/fastify),
-[Prisma ORM](https://github.com/prisma/prisma) and [Auth0](https://auth0.com/).
+The REST API layer built with [Fastify](https://github.com/fastify/fastify), [Prisma ORM](https://github.com/prisma/prisma), and [Auth0](https://auth0.com/).
 
 ### Packages
 
-- [@codeimage/ui](./packages/ui): contains the source code of the UI kit of CodeImage front-end application.
-  > **Note** the UI kit is being moved to [@codeui/kit](https://github.com/riccardoperra/codeui) repository
-- [@codeimage/config](./packages/config): contains the base configurations and interfaces for CodeImage
-- [@codeimage/highlight](./packages/highlight): contains the custom editor and highlighting themes for CodeMirror
-- [@codeimage/dom-export](./packages/dom-export): contains the [html-to-image](https://github.com/bubkoo/html-to-image)
-  fork which includes several fix for image export
-- [@codeimage/locale](./packages/locale): contains a wrapper
-  of [@solid-primitives/i18n](https://github.com/solidjs-community/solid-primitives/tree/main/packages/i18n) which
-  includes strict typing for i18n
-- [@codeimage/vanilla-extract](./packages/vanilla-extract): contain
-  the [Vanilla Extract](https://github.com/seek-oss/vanilla-extract) plugin fork which includes SolidJS and PNPM fixes
-  to work under monorepo.
-- [@codeimage/prisma-models](./packages/prisma-models): contains the Prisma ORM backend models shared across front-end
-  and back-end application.
-- [@codeimage/atomic-state](./packages/atomic-state): contain the source code of a small state manager which includes
-  some utilities helper for RxJS and solid-js/store
-
-## 🌏 Contributions
-
-> **Warning** **Read this before opening any PR!**
-
-When contributing, it's better to first discuss the change you wish to make via issue or discussion, or any other method
-with the owners of this repository before making a change.
-
-See the [CONTRIBUTING.md](./CONTRIBUTING.md) guide for more details.
+| Package | Description |
+|---|---|
+| [`@codeimage/ui`](./packages/ui) | UI kit for the CodeImage front-end |
+| [`@codeimage/dom-export`](./packages/dom-export) | Custom fork of [html-to-image](https://github.com/bubkoo/html-to-image) with several export fixes |
+| [`@codeimage/highlight`](./packages/highlight) | Custom editor and highlighting themes for CodeMirror |
+| [`@codeimage/locale`](./packages/locale) | Strict-typed i18n wrapper around `@solid-primitives/i18n` |
+| [`@codeimage/config`](./packages/config) | Shared base configurations and interfaces |
+| [`@codeimage/prisma-models`](./packages/prisma-models) | Prisma ORM models shared between front-end and back-end |
+| [`@codeimage/atomic-state`](./packages/atomic-state) | Small state manager with RxJS and solid-js/store utilities |
 
 ---
 
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/37072694/168666273-22af1fed-6ee5-49a5-be2a-6e0b9da998cf.png" width="600">
-</p>
-<p align="left">
-  CodeImage is the winner of <a href="https://hack.solidjs.com">SolidHack 2022</a> for the Best Application category!
-</p>
+## Running Locally
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for full setup instructions.
+
+```bash
+pnpm install
+pnpm libs:build
+pnpm dev
+```
+
+Open [http://localhost:4200](http://localhost:4200) in your browser.
+
+---
 
 ## License
 
