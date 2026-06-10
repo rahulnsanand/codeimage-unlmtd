@@ -13,8 +13,7 @@ const config: UserConfigExport = defineConfig(({mode}) => ({
   plugins: [
     {
       ...mdx({
-        jsx: true,
-        jsxImportSource: 'solid-jsx',
+        jsxImportSource: 'solid-js',
         providerImportSource: 'solid-mdx',
         rehypePlugins: [rehypeSlug, [rehypeRaw, {passThrough: nodeTypes}]],
       }),
@@ -88,7 +87,30 @@ const config: UserConfigExport = defineConfig(({mode}) => ({
     reportCompressedSize: true,
   },
   optimizeDeps: {
-    include: ['@codemirror/state', '@codemirror/view', '@codemirror/language'],
+    // noDiscovery suppresses the Vite 8 Rolldown bug where the scanner wrongly
+    // injects react/jsx-runtime into .tsx files (SolidJS project).
+    noDiscovery: true,
+    include: [
+      '@codemirror/state',
+      '@codemirror/view',
+      '@codemirror/language',
+      '@mswjs/data',
+      'downloadjs',
+      'seedrandom',
+      '@ngneat/falso > seedrandom',
+      // Pre-bundle every CJS sub-dependency of @vanilla-extract/css so the
+      // browser gets proper ESM default exports without duplicating VE itself.
+      '@vanilla-extract/css > cssesc',
+      '@vanilla-extract/css > deepmerge',
+      '@vanilla-extract/css > @emotion/hash',
+      '@vanilla-extract/css > css-what',
+      '@vanilla-extract/css > dedent',
+      '@vanilla-extract/css > deep-object-diff',
+      '@vanilla-extract/css > lru-cache',
+      '@vanilla-extract/css > media-query-parser',
+      '@vanilla-extract/css > modern-ahocorasick',
+      '@vanilla-extract/css > picocolors',
+    ],
   },
 }));
 

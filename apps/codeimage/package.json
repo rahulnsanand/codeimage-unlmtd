@@ -25,6 +25,7 @@
     "@types/mdx": "2.0.13",
     "@vanilla-extract/vite-plugin": "^5.2.1",
     "cross-env": "^10.1.0",
+    "cssesc": "^3.0.0",
     "https-localhost": "^4.7.1",
     "msw": "^2.12.14",
     "oxfmt": "catalog:next",
