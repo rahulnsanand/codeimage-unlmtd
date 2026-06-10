@@ -5,7 +5,7 @@ import {Button} from '@codeui/kit';
 import {createControlledDialog} from '@core/hooks/createControlledDialog';
 import {RenameContentDialog} from '@ui/ConfirmDialog/RenameContentDialog';
 import type {AppLocaleEntries} from '../../../i18n';
-import * as styles from '../../../pages/Dashboard/components/ProjectList/ProjectList.css';
+
 import {EmptyBox} from '../../Icons/EmptyBox';
 import {PlusIcon} from '../../Icons/PlusIcon';
 
@@ -15,11 +15,11 @@ export function EmptyPresetFallback() {
   const presetsStore = getPresetsStore();
 
   return (
-    <div class={styles.fallbackContainer}>
+    <div>
       <EmptyBox />
 
       <VStack spacing={'2'} marginTop={6}>
-        <Text size={'xl'} class={styles.fallbackTextTitle}>
+        <Text size={'xl'}>
           No presets
         </Text>
         <Box marginTop={5}>

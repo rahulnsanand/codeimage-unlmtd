@@ -35,18 +35,7 @@ export function ExperimentalFeatureTooltip(
       }}
       content={
         <>
-          {props.feature} is an experimental feature. For any issues or feedback
-          please fill an issue on
-          <Box as={'span'} marginLeft={'1'}>
-            <Link
-              underline
-              as={'a'}
-              target={'_blank'}
-              href={'https://github.com/riccardoperra/codeimage/issues'}
-            >
-              github repository.
-            </Link>
-          </Box>
+          {props.feature} is an experimental feature.
         </>
       }
     >

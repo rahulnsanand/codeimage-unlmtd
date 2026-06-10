@@ -14,37 +14,21 @@ export function ChangelogItem(props: FlowProps<ChangelogItemProps>) {
 
   const tag = () => `v${props.version}`;
 
-  const githubLink = () =>
-    `https://github.com/riccardoperra/codeimage/releases/tag/${tag()}`;
 
   return (
     <div class={styles.item}>
       <div class={styles.metadata}>
         <div class={styles.metadataContent}>
           <div class={styles.metadataVersionBadgeContainer}>
-            <a
-              class={styles.metadataVersionBadge({latest: props.latest})}
-              href={githubLink()}
-              target={'_blank'}
-            >
+            <div class={styles.metadataVersionBadge({latest: props.latest})}>
               {tag()}
-            </a>
+            </div>
           </div>
           <div class={styles.metadataVersionDate}>{formattedDate()}</div>
         </div>
       </div>
       <div class={styles.content}>
         {props.children}
-
-        <Link
-          variant={'underline'}
-          link
-          href={githubLink()}
-          target={'_blank'}
-          class={styles.fullChangelogLink}
-        >
-          Read the full changelog on GitHub.
-        </Link>
       </div>
     </div>
   );

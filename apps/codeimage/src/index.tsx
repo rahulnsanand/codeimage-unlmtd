@@ -27,9 +27,7 @@ console.debug("💻 CodeImage version:", appEnvironment.version);
 
 const i18n = createI18nContext(locale);
 
-if (import.meta.env.VITE_ENABLE_MSW === true) {
-  import("./mocks/browser").then(({ worker }) => worker.start());
-}
+
 
 // oxlint-disable-next-line typescript/no-explicit-any
 function lazyWithNoLauncher(cp: () => Promise<{ default: Component<any> }>) {
@@ -47,7 +45,7 @@ const tokens: ThemeProviderProps["tokens"] = {
   },
 };
 
-const Dashboard = lazyWithNoLauncher(() => import("./pages/Dashboard/Dashboard"));
+
 
 const Editor = () => {
   const Page = lazyWithNoLauncher(() => import("./pages/Editor/Editor"));
@@ -79,12 +77,7 @@ export function Bootstrap() {
     {
       path: "",
       component: () => {
-        const state = getAuth0State();
-        return (
-          <Show fallback={<Editor />} when={state.loggedIn()}>
-            <Dashboard />
-          </Show>
-        );
+        return <Editor />;
       },
     },
     {

@@ -12,7 +12,7 @@ import {createMemo, Show} from 'solid-js';
 import {CodeImageLogoV2} from '../Icons/CodeImageLogoV2';
 import {CollectionIcon} from '../Icons/Collection';
 import {sidebarLogo} from '../Scaffold/Sidebar/Sidebar.css';
-import {UserBadge} from '../UserBadge/UserBadge';
+
 import {ExportButton} from './ExportButton';
 import {ShareButton} from './ShareButton';
 import * as styles from './Toolbar.css';
@@ -82,7 +82,7 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
 
               <ExportButton canvasRef={props.canvasRef} />
             </Show>
-            <UserBadge />
+
           </HStack>
         </Box>
       </div>

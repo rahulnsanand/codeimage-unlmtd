@@ -1,4 +1,4 @@
-import type * as ApiTypes from '@codeimage/api/api-types';
+import type * as ApiTypes from '../../api-types';
 import {SUPPORTED_LANGUAGES} from '@codeimage/config';
 import {EditorConfigStore} from '@codeimage/store/editor/config.store';
 import {provideAppState} from '@codeimage/store/index';
@@ -239,8 +239,8 @@ export function createEditorsStore() {
 
   const setFromWorkspace = (item: ApiTypes.GetProjectByIdApi['response']) => {
     setEditors(
-      item.editorTabs.map(
-        editor =>
+      item.editorTabs?.map(
+        (editor: any) =>
           ({
             tab: {
               tabName: editor.tabName,

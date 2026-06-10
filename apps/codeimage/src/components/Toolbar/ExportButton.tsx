@@ -1,6 +1,6 @@
 import {useI18n} from '@codeimage/locale';
 import {getExportCanvasStore} from '@codeimage/store/canvas';
-import type {SegmentedFieldItem} from '@codeimage/ui';
+
 import {
   Box,
   FieldLabel,
@@ -25,6 +25,7 @@ import {getUmami} from '@core/constants/umami';
 import {useModality} from '@core/hooks/isMobile';
 import {useWebshare} from '@core/hooks/use-webshare';
 import {DynamicSizedContainer} from '@ui/DynamicSizedContainer/DynamicSizedContainer';
+import type {SegmentedFieldItem} from '@ui/SegmentedField/SegmentedField';
 import {SegmentedField} from '@ui/SegmentedField/SegmentedField';
 import type {Component} from 'solid-js';
 import {createEffect, createSignal, onMount, Show, untrack} from 'solid-js';

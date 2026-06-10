@@ -42,16 +42,7 @@ export function ToolbarSettingsButton() {
           <DropdownMenuItem onClick={() => openDialog(Changelog, {})}>
             Changelog
           </DropdownMenuItem>
-          <DropdownMenuItem
-            rightSlot={<ExternalLinkIcon />}
-            as={'a'}
-            target={'_blank'}
-            // TODO: add codeui dropdownMenuItemLink style
-            style={{'text-decoration': 'unset'}}
-            href={'https://github.com/riccardoperra/codeimage'}
-          >
-            GitHub
-          </DropdownMenuItem>
+
 
           <Show when={loggedIn()}>
             <DropdownMenuItem

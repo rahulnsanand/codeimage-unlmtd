@@ -11,6 +11,8 @@ import {
   VStack,
 } from '@codeimage/ui';
 import {Checkbox, PopoverContent} from '@codeui/kit';
+import type {SegmentedFieldItem} from '@ui/SegmentedField/SegmentedField';
+import {SegmentedField} from '@ui/SegmentedField/SegmentedField';
 import {DynamicSizedContainer} from '@ui/DynamicSizedContainer/DynamicSizedContainer';
 import {createSignal, Show} from 'solid-js';
 import {ExportExtension} from '../../hooks/use-export-image';

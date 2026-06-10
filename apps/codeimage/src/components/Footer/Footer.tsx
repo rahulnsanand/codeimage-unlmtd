@@ -1,5 +1,5 @@
 import {Box, Link} from '@codeimage/ui';
-import {getUmami} from '@core/constants/umami';
+
 import {createControlledDialog} from '@core/hooks/createControlledDialog';
 import {Changelog} from '../Changelog/Changelog';
 import {link} from './Footer.css';
@@ -11,50 +11,6 @@ export const Footer = () => {
   return (
     <div class={styles.wrapper}>
       <Box display={'inlineFlex'} justifyContent={'flexEnd'} padding={1}>
-        <Box marginRight={5}>
-          <Link
-            class={`${styles.link} ${styles.linkOnlyDesktop}`}
-            target={'_blank'}
-            title="Better Comments for GitHub"
-            href={'https://github.com/riccardoperra/better-comments-for-github'}
-            size="xs"
-            onClick={() => getUmami().track('better-comments-for-github')}
-          >
-            Better Comments for GitHub
-          </Link>
-        </Box>
-        <Box marginRight={5}>
-          <Link
-            class={link}
-            href={'https://github.com/riccardoperra/codeimage'}
-            size="xs"
-          >
-            GitHub
-          </Link>
-        </Box>
-
-        <Box marginRight={5}>
-          <Link
-            as={'a'}
-            class={link}
-            href={'https://github.com/riccardoperra/codeimage/issues'}
-            size="xs"
-          >
-            Issue & Feedback
-          </Link>
-        </Box>
-
-        <Box marginRight={5}>
-          <Link
-            class={link}
-            as={'a'}
-            href={'https://github.com/riccardoperra/codeimage/releases'}
-            size="xs"
-          >
-            Releases
-          </Link>
-        </Box>
-
         <Box>
           <Link
             class={link}

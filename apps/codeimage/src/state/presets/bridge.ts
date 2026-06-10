@@ -1,4 +1,4 @@
-import type * as ApiTypes from '@codeimage/api/api-types';
+import type * as ApiTypes from '../../api-types';
 import {getAuth0State} from '@codeimage/store/auth/auth0';
 import {getRootEditorStore} from '@codeimage/store/editor';
 import {getFrameState} from '@codeimage/store/editor/frame';
@@ -94,8 +94,8 @@ export const withPresetBridge = (idbKey: string) =>
             return Promise.resolve({
               id,
               name,
-              createdAt: new Date(),
-              updatedAt: new Date(),
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
               version: 1,
               data: presetData,
             });
