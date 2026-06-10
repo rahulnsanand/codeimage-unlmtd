@@ -2,7 +2,18 @@ import {type HtmlExportOptions} from '@codeimage/dom-export';
 import {EXPORT_EXCLUDE} from '@core/directives/exportExclude';
 import {useWebshare} from '@core/hooks/use-webshare';
 import {isIOS} from '@solid-primitives/platform';
-import download from 'downloadjs';
+function download(data: string | Blob, fileName: string, mimeType?: string) {
+  const link = document.createElement('a');
+  link.download = fileName;
+  const isString = typeof data === 'string';
+  const isDataUrl = isString && data.startsWith('data:');
+  const url = isString && !isDataUrl ? URL.createObjectURL(new Blob([data], { type: mimeType })) : isString ? data : URL.createObjectURL(data);
+  link.href = url;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  if (!isDataUrl) URL.revokeObjectURL(url);
+}
 
 function loadDomExport() {
   return import('@codeimage/dom-export');
@@ -152,7 +163,7 @@ export async function exportImage(
         } as const;
 
         const result = await fn[extension](ref, toImageOptions);
-        download(result, fileNameWithExtension);
+        download(result, fileNameWithExtension, mimeType);
 
         return result;
       }

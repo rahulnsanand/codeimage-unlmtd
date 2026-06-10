@@ -13,6 +13,7 @@ const config: UserConfigExport = defineConfig(({mode}) => ({
   plugins: [
     {
       ...mdx({
+        jsx: true,
         jsxImportSource: 'solid-js',
         providerImportSource: 'solid-mdx',
         rehypePlugins: [rehypeSlug, [rehypeRaw, {passThrough: nodeTypes}]],

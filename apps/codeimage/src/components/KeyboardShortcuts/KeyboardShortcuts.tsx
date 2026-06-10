@@ -59,7 +59,7 @@ export function KeyboardShortcuts(): JSXElement {
     document.activeElement?.nodeName === 'INPUT';
 
   useHotkey(document.body, {
-    F: event => {
+    F: (event: any) => {
       if (filterHotKey()) return;
       event.preventDefault();
       editor.actions.setFocused(true);

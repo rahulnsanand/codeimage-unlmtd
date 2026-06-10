@@ -1,4 +1,3 @@
-import type {AnimationControls} from 'motion';
 import {animate} from 'motion';
 import type {FlowProps} from 'solid-js';
 import {onCleanup, onMount} from 'solid-js';
@@ -14,7 +13,7 @@ export function DynamicSizedContainer(
   props: FlowProps<DynamicSizedContainerProps>,
 ) {
   let ref!: HTMLDivElement;
-  let animation: AnimationControls | null = null;
+  let animation: any = null;
 
   const triggerAnimation = (width: string, height: string) => {
     return animate(
@@ -22,7 +21,7 @@ export function DynamicSizedContainer(
       {
         width,
         height,
-      },
+      } as any,
       {duration: 0.2, easing: [0.4, 0, 0.2, 1]},
     );
   };

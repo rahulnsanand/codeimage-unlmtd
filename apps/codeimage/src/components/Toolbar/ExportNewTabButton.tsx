@@ -57,7 +57,7 @@ export const ExportInNewTabButton: Component<ExportButtonProps> = props => {
   });
 
   useHotkey(document.body, {
-    'Control+o': event => {
+    'Control+o': (event: any) => {
       event.preventDefault();
       openInTab();
     },

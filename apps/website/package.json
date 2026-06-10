@@ -18,13 +18,10 @@
     "@codemirror/view": "catalog:next",
     "@lezer/highlight": "catalog:next",
     "@solid-primitives/media": "^2.3.5",
-    "@solid-primitives/platform": "^0.2.1",
-    "@tanstack/router-plugin": "^1.167.7",
     "@tanstack/solid-router": "latest",
     "@tanstack/solid-router-devtools": "latest",
-    "@tanstack/solid-router-ssr-query": "latest",
     "@tanstack/solid-start": "latest",
-    "motion": "^10.15.5",
+    "motion": "^12.40.0",
     "solid-codemirror": "catalog:next",
     "solid-js": "catalog:next",
     "solid-motionone": "^1.0.4",
@@ -34,7 +31,6 @@
     "@lhci/cli": "^0.15.1",
     "@tanstack/devtools-vite": "latest",
     "@types/node": "catalog:next",
-    "typescript": "^6.0.2",
     "vite": "catalog:next",
     "vite-plugin-solid": "catalog:next"
   }

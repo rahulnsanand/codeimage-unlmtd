@@ -10,7 +10,7 @@
 
 ## About This Fork
 
-This is a fork of [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra), modified to remove the export resolution cap and allow image exports up to **16K quality**.
+This is a fork of [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra), modified to be the best, most stripped-down, no-nonsense version of the original code.
 
 ### What Changed
 
@@ -18,8 +18,10 @@ This is a fork of [CodeImage](https://github.com/riccardoperra/codeimage) by [Ri
 |---|---|---|
 | Export dialog slider | Max `3x` pixel ratio | Max `16x` pixel ratio |
 | Export settings popover | Fixed buttons: `1x / 2x / 3x / 6x` | Continuous slider: `1x → 16x` |
+| Backend & Database | Required Auth0, Prisma, Fastify | **Removed.** 100% serverless static app |
+| Data Collection | Umami analytics tracking | **Removed.** No analytics or tracking |
 
-**That's it.** Everything else — all features, themes, editor behaviour, state management, auth, API — is untouched from the original.
+**That's it.** Everything else — all core features, themes, editor behaviour, and state management — is untouched. It's a no-nonsense tool that does what it's supposed to do, nothing more, nothing less. It can be deployed for free on Cloudflare Pages or GitHub Pages without requiring any backend infrastructure or database limits.
 
 At a typical frame width of ~800 px, a `16x` export produces a **~12 800 px wide** image, well within the browser canvas limit of 16 384 px. The underlying export engine (`@codeimage/dom-export`) already handled the canvas safety cap; only the UI sliders were artificially limited.
 

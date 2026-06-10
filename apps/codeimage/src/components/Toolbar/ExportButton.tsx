@@ -67,7 +67,7 @@ export const ExportButton: Component<ExportButtonProps> = props => {
   });
 
   useHotkey(document.body, {
-    'Control+s': event => {
+    'Control+s': (event: any) => {
       event.preventDefault();
       setOpen(true);
     },
