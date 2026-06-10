@@ -104,8 +104,13 @@ export const VersionStore = defineStore<VersionStore>(initialValue)
                 feature.seen[currentVersion] = 0;
               });
             }
-            if (isFirstTime || hasNewUpdate) {
+            const hideWelcomeModal = localStorage.getItem('hideWelcomeModal') === 'true';
+            
+            if (!hideWelcomeModal) {
               controlledDialog(PrivacyReminder, {});
+            }
+            
+            if (isFirstTime || hasNewUpdate) {
               const updatedData = updateWithLatestVersionSeen(
                 currentVersion,
                 data,

@@ -18,7 +18,7 @@ export const darkGrayScale = {
 } as const;
 
 createGlobalCodeImageTheme('dark', {
-  primary: themeVars.backgroundColor.blue['400'],
+  primary: '#f55d00',
   background: darkGrayScale.gray2,
   baseText: darkGrayScale.gray12,
   descriptionTextColor: '#999999',
@@ -48,14 +48,14 @@ createGlobalCodeImageTheme('dark', {
       textColor: darkGrayScale.gray12,
     },
     primaryAlt: {
-      backgroundColor: `hsla(204, 100%, 50%, 0.15)`,
-      hoverColor: `hsla(204, 100%, 40%, 0.15)`,
-      textColor: themeVars.backgroundColor.blue['500'],
+      backgroundColor: `hsla(23, 100%, 50%, 0.15)`,
+      hoverColor: `hsla(23, 100%, 40%, 0.15)`,
+      textColor: '#f55d00',
     },
     primary: {
-      backgroundColor: themeVars.backgroundColor.blue['500'],
-      activeColor: themeVars.backgroundColor.blue['700'],
-      hoverColor: themeVars.backgroundColor.blue['600'],
+      backgroundColor: '#f55d00',
+      activeColor: '#cc4d00',
+      hoverColor: '#e05500',
       textColor: themeVars.backgroundColor.white,
     },
     danger: {
@@ -68,7 +68,7 @@ createGlobalCodeImageTheme('dark', {
 
   listBox: {
     panelBackground: darkGrayScale.gray4, // 5
-    activeBackgroundColor: themeVars.backgroundColor.blue['700'], // 500
+    activeBackgroundColor: '#cc4d00', // 700
     hoverBackgroundColor: darkGrayScale.gray6,
     textColor: darkGrayScale.gray12,
     activeTextColor: darkGrayScale.gray12,

@@ -24,11 +24,11 @@ export const baseField = style([
     height: fallbackVar(textFieldVars.inputHeight, '100%'),
     color: 'currentcolor',
     ':focus': {
-      borderColor: themeVars.backgroundColor.blue['500'],
+      borderColor: themeVars.dynamicColors.primary,
     },
     ':focus-visible': {
       outline: 'none',
-      borderColor: themeVars.backgroundColor.blue['500'],
+      borderColor: themeVars.dynamicColors.primary,
     },
   },
 ]);

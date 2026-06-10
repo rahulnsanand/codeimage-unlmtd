@@ -3,7 +3,7 @@ import {createGlobalCodeImageTheme} from '../tokens/createCodeImageTheme';
 import {darkGrayScale} from './dark-theme.css';
 
 createGlobalCodeImageTheme('light', {
-  primary: themeVars.backgroundColor.blue['500'],
+  primary: '#f55d00',
   background: themeVars.backgroundColor.gray['100'],
   baseText: themeVars.textColor.gray['700'],
   descriptionTextColor: themeVars.backgroundColor.gray['700'],
@@ -33,14 +33,14 @@ createGlobalCodeImageTheme('light', {
       textColor: themeVars.backgroundColor.gray['800'],
     },
     primaryAlt: {
-      backgroundColor: `hsla(204, 100%, 50%, 0.15)`,
-      hoverColor: `hsla(204, 100%, 40%, 0.15)`,
-      textColor: themeVars.backgroundColor.blue['500'],
+      backgroundColor: `hsla(23, 100%, 50%, 0.15)`,
+      hoverColor: `hsla(23, 100%, 40%, 0.15)`,
+      textColor: '#f55d00',
     },
     primary: {
-      backgroundColor: themeVars.backgroundColor.blue['500'],
-      activeColor: themeVars.backgroundColor.blue['700'],
-      hoverColor: themeVars.backgroundColor.blue['600'],
+      backgroundColor: '#f55d00',
+      activeColor: '#cc4d00',
+      hoverColor: '#e05500',
       textColor: themeVars.backgroundColor.white,
     },
     danger: {
@@ -53,7 +53,7 @@ createGlobalCodeImageTheme('light', {
 
   listBox: {
     panelBackground: themeVars.backgroundColor.white,
-    activeBackgroundColor: themeVars.backgroundColor.blue['500'],
+    activeBackgroundColor: '#f55d00',
     hoverBackgroundColor: themeVars.backgroundColor.gray['100'],
     textColor: themeVars.backgroundColor.gray['800'],
     activeTextColor: themeVars.backgroundColor.white,

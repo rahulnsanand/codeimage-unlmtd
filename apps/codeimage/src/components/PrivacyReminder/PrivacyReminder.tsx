@@ -1,52 +1,112 @@
-import {Box} from '@codeimage/ui';
+import {Box, Text} from '@codeimage/ui';
 import {
   Button,
   Dialog,
   DialogPanelContent,
   DialogPanelFooter,
+  Checkbox,
 } from '@codeui/kit';
 import type {ControlledDialogProps} from '@core/hooks/createControlledDialog';
 import {useModality} from '@core/hooks/isMobile';
+import {createSignal} from 'solid-js';
+
+import {CloudIcon} from '../Icons/CloudIcon';
+import {DownloadIcon} from '../Icons/Download';
+import {SparklesIcon} from '../Icons/SparklesIcon';
+import {CheckCircle} from '../Icons/CheckCircle';
+import {CodeImageLogoV2} from '../Icons/CodeImageLogoV2';
 
 export function PrivacyReminder(props: ControlledDialogProps) {
   const modality = useModality();
+  const [dontShowAgain, setDontShowAgain] = createSignal(!!localStorage.getItem('hideWelcomeModal'));
+
+  const handleDontShowAgainChange = (checked: boolean) => {
+    setDontShowAgain(checked);
+    if (checked) {
+      localStorage.setItem('hideWelcomeModal', 'true');
+    } else {
+      localStorage.removeItem('hideWelcomeModal');
+    }
+  };
 
   return (
     <Dialog
-      title={"Welcome to CodeImage unlmtd!"}
       open={props.isOpen}
-      size={modality === 'mobile' ? 'full' : 'md'}
+      size={modality === 'mobile' ? 'full' : 'lg'}
       onOpenChange={open => {
         props.onOpenChange(open);
       }}
     >
       <DialogPanelContent>
-        <Box display={'flex'} flexDirection={'column'} gap={4}>
+        <Box display="flex" alignItems="center" justifyContent="center" paddingTop={4} style={{ gap: '12px', width: '100%' }}>
+          <Text weight="bold" size="xl">Welcome to</Text>
+          <CodeImageLogoV2 height={28} />
+        </Box>
+        <Box display={'flex'} flexDirection={'column'} paddingY={4} style={{ gap: '24px' }}>
           <Box>
-            <strong>🔒 Privacy First</strong>
-            <Box as="p" marginTop={1}>No data is collected, not even for usage or diagnostics. Your privacy is paramount.</Box>
+            <Text size="base" style={{ color: "var(--cui-text-muted)" }}>
+              The supercharged, beautifully optimized version of CodeImage. We've stripped out the heavy backend to give you a pure, lightning-fast experience.
+            </Text>
           </Box>
-          <Box>
-            <strong>💻 Local Storage</strong>
-            <Box as="p" marginTop={1}>All your data and snippets are securely stored only in your local browser.</Box>
-          </Box>
-          <Box>
-            <strong>🔓 Open Source</strong>
-            <Box as="p" marginTop={1}>The code is 100% free and open-source.</Box>
-          </Box>
-          <Box>
-            <strong>☁️ Self-Hostable</strong>
-            <Box as="p" marginTop={1}>You can easily deploy and self-host this tool on your own infrastructure.</Box>
-          </Box>
+          
+          <div style={{ display: 'grid', "grid-template-columns": modality === 'mobile' ? "1fr" : "1fr 1fr", gap: "24px" }}>
+            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
+              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
+                <Box style={{color: '#3b82f6', display: 'flex'}}><CloudIcon size="lg" /></Box>
+                <Text weight="semibold">100% Serverless</Text>
+              </Box>
+              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>No databases, no heavy APIs. Everything runs blazingly fast entirely in your browser.</Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
+              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
+                <Box style={{color: '#10b981', display: 'flex'}}><CheckCircle size="lg" /></Box>
+                <Text weight="semibold">Privacy First</Text>
+              </Box>
+              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>No telemetry, no tracking, and no data collection. Your code stays yours.</Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
+              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
+                <Box style={{color: '#8b5cf6', display: 'flex'}}><DownloadIcon size="lg" /></Box>
+                <Text weight="semibold">16x Export Resolution</Text>
+              </Box>
+              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Supercharged export options up to 16x multiplier for pixel-perfect social media posts.</Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
+              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
+                <Box style={{color: '#f59e0b', display: 'flex'}}><SparklesIcon size="lg" /></Box>
+                <Text weight="semibold">Uncapped Features</Text>
+              </Box>
+              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Free and uncapped. Generate unlimited screenshots without any paywalls or limits.</Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{ gap: '8px', 'grid-column': '1 / -1' }}>
+              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
+                <Box style={{color: '#14b8a6', display: 'flex'}}><CheckCircle size="lg" /></Box>
+                <Text weight="semibold">Zero Vulnerabilities</Text>
+              </Box>
+              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Built on a modern stack with no deprecated dependencies and absolutely zero runtime security vulnerabilities.</Text>
+            </Box>
+          </div>
         </Box>
       </DialogPanelContent>
       <DialogPanelFooter>
-        <Box display={'flex'} justifyContent={'flexEnd'}>
+        <Box display={'flex'} justifyContent={'spaceBetween'} alignItems={'center'} width="100%">
+          <Checkbox
+            size="md"
+            label="Don't show this again"
+            checked={dontShowAgain()}
+            onChange={handleDontShowAgainChange}
+          />
           <Button
             theme={'primary'}
+            size="lg"
             onClick={() => props.onOpenChange(false)}
+            style={{ width: modality === 'mobile' ? '100%' : 'auto' }}
           >
-            I understand
+            Start Creating
           </Button>
         </Box>
       </DialogPanelFooter>

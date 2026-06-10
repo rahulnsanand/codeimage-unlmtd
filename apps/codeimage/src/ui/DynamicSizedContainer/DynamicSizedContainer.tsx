@@ -22,7 +22,7 @@ export function DynamicSizedContainer(
         width,
         height,
       } as any,
-      {duration: 0.2, easing: [0.4, 0, 0.2, 1]},
+      {duration: 0.2, ease: [0.4, 0, 0.2, 1]},
     );
   };
 

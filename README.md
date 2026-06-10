@@ -1,20 +1,22 @@
 <div align="center">
   <img src="assets/banner.png?raw=true" alt="CodeImage logo" />
 
-  <h1>📸 CodeImage UNLMTD</h1>
+  <h1>CodeImage unlmtd</h1>
 
   <p><strong>Create elegant, high-definition code screenshots. No limits. No tracking. Pure awesomeness.</strong></p>
 
   [![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
   [![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
   ![License](https://img.shields.io/github/license/riccardoperra/codeimage)
+
+  <p><strong><a href="https://codeimageunlmtd.pages.dev/">🚀 Launch the Web App</a></strong></p>
 </div>
 
 ---
 
 ## 🌟 The UNLMTD Version
 
-Welcome to **CodeImage UNLMTD**! This is a supercharged, stripped-down, and beautifully optimized fork of the amazing [CodeImage](https://github.com/riccardoperra/codeimage) by [Riccardo Perra](https://github.com/riccardoperra).
+Welcome to **CodeImage UNLMTD**! This is a supercharged, stripped-down, and beautifully optimized fork of the amazing [CodeImage](https://github.com/riccardoperra/codeimage).
 
 We took an already fantastic tool and asked: *How can we make this lighter, faster, more secure, and completely unrestricted?* Here is what makes this codebase the ultimate version to fork, use, and trust:
 
@@ -23,7 +25,7 @@ We took an already fantastic tool and asked: *How can we make this lighter, fast
 - 🖼️ **No Size Limit Restrictions:** Say goodbye to arbitrary limits! Export your code at massive resolutions with a continuous slider scaling all the way up to **16x pixel ratio** (up to ~16,384px canvas limits). Your code deserves to be crystal clear.
 - 📦 **Latest & Essential Dependencies Only:** We've ruthlessly audited and purged all unnecessary, bloated, and deprecated packages. Every dependency has been bumped to its absolute latest, most secure version. It's leaner, meaner, and faster than ever.
 - 🕵️ **Zero Data Collection:** We respect your privacy. All analytics, telemetry, and tracking (like Umami) have been completely removed. Your data is yours.
-- ☁️ **100% Serverless & Backend-Free:** We stripped out the heavy backend requirements (Auth0, Prisma, Fastify, Databases). This is a pure static frontend application.
+- ☁️ **100% Serverless & Backend-Free:** We stripped out the heavy backend requirements (Auth0, Prisma, Fastify, Databases). This is a pure static frontend application. Try it instantly at **[codeimageunlmtd.pages.dev](https://codeimageunlmtd.pages.dev/)**.
 - 🛠️ **Fully Open Source, Forkable & Ready to Use:** Since there's no complex backend infrastructure to wire up, you can fork this repo and deploy it immediately for free on Cloudflare Pages, Vercel, or GitHub Pages.
 
 ---
@@ -61,7 +63,7 @@ Built entirely with SolidJS, focusing on extreme performance and minimal footpri
 
 ## 🚀 Running Locally
 
-Getting started is insanely easy since there are no databases or backend APIs to configure!
+Getting started is insanely easy since there are no databases or backend APIs to configure! If you just want to use the app, visit the **[Live Website](https://codeimageunlmtd.pages.dev/)**. Otherwise, to run it locally:
 
 ```bash
 # 1. Install dependencies (we use pnpm!)

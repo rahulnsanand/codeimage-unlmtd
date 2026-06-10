@@ -2,7 +2,7 @@
 
 ## 2026-06-10 — Fork Changes
 
-`codeimage-unlmtd`
+`codeimage-unlmtd` (Live at [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/))
 
 - **feat(export):** raise pixel ratio slider maximum from `3x` to `16x` in the export dialog modal (`ExportButton.tsx`)
 - **feat(export):** replace fixed `1x/2x/3x/6x` segmented buttons in the settings popover with a continuous `1–16x` slider (`ExportContent.tsx`)

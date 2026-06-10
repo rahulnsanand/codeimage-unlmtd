@@ -33,7 +33,7 @@ export const DynamicTerminal: ParentComponent<DynamicTerminalProps> = (
 
       <FadeInOutTransition show={props.showWatermark}>
         <Box class={styles.watermark}>
-          <CodeImageLogoV2 width={125} withGradient={false} />
+          <CodeImageLogoV2 width={125} />
         </Box>
       </FadeInOutTransition>
     </Dynamic>

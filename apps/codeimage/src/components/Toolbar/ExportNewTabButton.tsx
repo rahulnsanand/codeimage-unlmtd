@@ -65,7 +65,7 @@ export const ExportInNewTabButton: Component<ExportButtonProps> = props => {
 
   return (
     <Button
-      theme={'tertiary'}
+      theme={'primary'}
       leftIcon={<ExternalLinkIcon />}
       loading={data.loading}
       onClick={() => openInTab()}

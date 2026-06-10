@@ -21,35 +21,30 @@ export function ToolbarSettingsButton() {
   const {signOut, loggedIn} = getAuth0State();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger
-        as={IconButton}
-        pill={true}
-        size={'xs'}
-        theme={'secondary'}
-        aria-label={'Menu'}
-      >
-        <MenuAlt2Icon size={'sm'} />
-      </DropdownMenuTrigger>
-      <DropdownMenuPortal>
-        <DropdownMenuContent>
-          <DropdownMenuItem
-            onClick={() => openDialog(SettingsDialog, () => ({}))}
-          >
-            Settings
-          </DropdownMenuItem>
+    <Show when={loggedIn()}>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          as={IconButton}
+          pill={true}
+          size={'xs'}
+          theme={'secondary'}
+          aria-label={'Menu'}
+        >
+          <MenuAlt2Icon size={'sm'} />
+        </DropdownMenuTrigger>
+        <DropdownMenuPortal>
+          <DropdownMenuContent>
 
-
-
-          <Show when={loggedIn()}>
-            <DropdownMenuItem
-              onClick={() => signOut().then(() => navigate('/'))}
-            >
-              Logout
-            </DropdownMenuItem>
-          </Show>
-        </DropdownMenuContent>
-      </DropdownMenuPortal>
-    </DropdownMenu>
+            <Show when={loggedIn()}>
+              <DropdownMenuItem
+                onClick={() => signOut().then(() => navigate('/'))}
+              >
+                Logout
+              </DropdownMenuItem>
+            </Show>
+          </DropdownMenuContent>
+        </DropdownMenuPortal>
+      </DropdownMenu>
+    </Show>
   );
 }

@@ -28,7 +28,7 @@ export const radioBlock = recipe({
   variants: {
     selected: {
       true: {
-        borderColor: themeVars.backgroundColor.blue['500'],
+        borderColor: themeVars.dynamicColors.primary,
       },
     },
   },

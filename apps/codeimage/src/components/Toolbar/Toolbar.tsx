@@ -3,7 +3,8 @@ import {getRootEditorStore} from '@codeimage/store/editor';
 import {getEditorSyncAdapter} from '@codeimage/store/editor/createEditorSync';
 import {getThemeStore} from '@codeimage/store/theme/theme.store';
 import {backgroundColorVar, Box, colorVar, HStack} from '@codeimage/ui';
-import {buttonStyles, Link} from '@codeui/kit';
+import {buttonStyles, Link, IconButton} from '@codeui/kit';
+import {createControlledDialog} from '@core/hooks/createControlledDialog';
 import {useModality} from '@core/hooks/isMobile';
 import {A as LocalLink} from '@solidjs/router';
 import {assignInlineVars} from '@vanilla-extract/dynamic';
@@ -16,6 +17,9 @@ import {sidebarLogo} from '../Scaffold/Sidebar/Sidebar.css';
 import {ExportButton} from './ExportButton';
 import {ShareButton} from './ShareButton';
 import * as styles from './Toolbar.css';
+import {SettingsIcon} from '../Icons/SettingsIcon';
+import {GithubIcon} from '../Icons/GithubIcon';
+import {SettingsDialog} from './SettingsDialog';
 import {ToolbarSettingsButton} from './ToolbarSettings';
 import {ToolbarSnippetName} from './ToolbarSnippetName';
 
@@ -29,6 +33,7 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
   const {themeArray: themes} = getThemeStore();
   const loggedIn = () => getAuth0State().loggedIn();
   const isRemote = () => !!getEditorSyncAdapter()?.snippetId();
+  const openDialog = createControlledDialog();
 
   const themeConfiguration = createMemo(
     () =>
@@ -51,7 +56,7 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
         <ToolbarSettingsButton />
         <Box display={'flex'} alignItems={'center'} marginLeft={5}>
           <div class={sidebarLogo}>
-            <CodeImageLogoV2 height={26} withGradient={true} />
+            <CodeImageLogoV2 height={26} />
           </div>
           <Show when={loggedIn() && modality === 'full'}>
             <Box marginLeft={16}>
@@ -78,9 +83,30 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
         <Box class={styles.actionBox} flexGrow={1}>
           <HStack marginLeft={'auto'} spacing={'2'}>
             <Show when={modality === 'full'} keyed={false}>
+              <ExportButton canvasRef={props.canvasRef} />
+
+              <IconButton
+                as="a"
+                href="https://github.com/rahulnsanand/codeimage-unlmtd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+                theme="secondary"
+                size="sm"
+              >
+                <GithubIcon size="sm" />
+              </IconButton>
+
               <ShareButton showLabel={false} />
 
-              <ExportButton canvasRef={props.canvasRef} />
+              <IconButton
+                onClick={() => openDialog(SettingsDialog, () => ({}))}
+                aria-label="Settings"
+                theme="secondary"
+                size="sm"
+              >
+                <SettingsIcon size="sm" />
+              </IconButton>
             </Show>
 
           </HStack>

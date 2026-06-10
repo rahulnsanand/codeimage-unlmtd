@@ -42,7 +42,7 @@ export const range = style([
       cursor: 'pointer',
       borderRadius: 0,
       border: `1px solid ${themeVars.backgroundColor.gray}`,
-      background: `linear-gradient(90deg, ${themeVars.backgroundColor.blue['500']} ${rangeVars.rangeProgress}, ${themeVars.dynamicColors.divider}  ${rangeVars.rangeProgress})`,
+      background: `linear-gradient(90deg, ${themeVars.dynamicColors.primary} ${rangeVars.rangeProgress}, ${themeVars.dynamicColors.divider}  ${rangeVars.rangeProgress})`,
       height: '2px',
     },
 
@@ -51,7 +51,7 @@ export const range = style([
       cursor: 'pointer',
       borderRadius: 0,
       border: `1px solid ${themeVars.backgroundColor.gray}`,
-      background: `linear-gradient(90deg, ${themeVars.backgroundColor.blue['500']} ${rangeVars.rangeProgress}, ${themeVars.dynamicColors.divider}  ${rangeVars.rangeProgress})`,
+      background: `linear-gradient(90deg, ${themeVars.dynamicColors.primary} ${rangeVars.rangeProgress}, ${themeVars.dynamicColors.divider}  ${rangeVars.rangeProgress})`,
       height: '2px',
     },
 

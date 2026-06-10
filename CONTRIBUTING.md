@@ -27,7 +27,7 @@ pnpm -v
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/codeimage-unlmtd.git
+git clone https://github.com/rahulnsanand/codeimage-unlmtd.git
 cd codeimage-unlmtd
 ```
 
@@ -37,37 +37,17 @@ cd codeimage-unlmtd
 pnpm install
 ```
 
-### 3. Prepare the environment
+### 3. Start the development server
 
-You need [Docker](https://www.docker.com/) installed to spin up the local database:
-
-```bash
-# Docker Compose v2
-docker compose -f apps/api/docker-compose.dev.yml -p codeimage up -d
-
-# Docker Compose v1 (legacy)
-docker-compose -f apps/api/docker-compose.dev.yml -p codeimage up -d
-```
-
-Once containers are ready, run the environment setup CLI:
-
-```bash
-pnpm prepare:env
-```
-
-> **Note:** Enable the Auth0 mock if you don't have a configured Auth0 account with environment variables.
-
-Prisma migrations will run automatically after configuration.
-
-### 4. Start the development server
+There are no databases, mock APIs, or Docker containers required. Simply build the libs and start the dev server:
 
 ```bash
 pnpm libs:build   # Build dependent libraries first
 pnpm dev
 ```
 
-- Front-end: [http://localhost:4200](http://localhost:4200)
-- API: [http://localhost:3000](http://localhost:3000)
+- Local Front-end: [http://localhost:4200](http://localhost:4200)
+- Live Application: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
 
 ---
 

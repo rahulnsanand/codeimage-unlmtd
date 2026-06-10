@@ -14,21 +14,5 @@ export function FeatureBadge(props: FeatureBadgeProps) {
 
   const feature = versionStore.getFeature(() => props.featureName);
 
-  return (
-    <Show when={feature()}>
-      {feature => (
-        <Presence>
-          <Show when={feature().totalViews() < props.untilSeenTimes}>
-            <Motion.div
-              animate={{opacity: [0, 1]}}
-              exit={{opacity: [1, 0]}}
-              class={styles.badge}
-            >
-              New
-            </Motion.div>
-          </Show>
-        </Presence>
-      )}
-    </Show>
-  );
+  return null;
 }
