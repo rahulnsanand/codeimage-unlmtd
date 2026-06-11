@@ -15,6 +15,9 @@ import {DownloadIcon} from '../Icons/Download';
 import {SparklesIcon} from '../Icons/SparklesIcon';
 import {CheckCircle} from '../Icons/CheckCircle';
 import {CodeImageLogoV2} from '../Icons/CodeImageLogoV2';
+import {UploadIcon} from '../Icons/UploadIcon';
+import {DockerIcon} from '../Icons/DockerIcon';
+import {ExternalLinkIcon} from '../Icons/ExternalLink';
 
 export function PrivacyReminder(props: ControlledDialogProps) {
   const modality = useModality();
@@ -123,6 +126,50 @@ export function PrivacyReminder(props: ControlledDialogProps) {
               <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
                 Free and uncapped. Generate unlimited screenshots without any
                 paywalls or limits.
+              </Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#f97316', display: 'flex'}}>
+                  <UploadIcon size="lg" />
+                </Box>
+                <Text weight="semibold">Import Code from File</Text>
+              </Box>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                Import code files directly from your device. Languages are
+                automatically detected and formatted entirely in your browser.
+              </Text>
+            </Box>
+
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#0db7ed', display: 'flex'}}>
+                  <DockerIcon size="lg" />
+                </Box>
+                <Text weight="semibold">Self-Host with Docker</Text>
+              </Box>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)', display: 'flex', 'flex-direction': 'column', gap: '4px'}}>
+                <span>
+                  Deploy this application locally on Windows, macOS, Linux, or
+                  Raspberry Pi servers.
+                </span>
+                <a
+                  href="https://github.com/rahulnsanand/codeimage-unlmtd/blob/main/DOCKER.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: '#0db7ed',
+                    'text-decoration': 'underline',
+                    display: 'inline-flex',
+                    'align-items': 'center',
+                    gap: '4px',
+                    'font-weight': '500',
+                  }}
+                >
+                  View Docker Guide
+                  <ExternalLinkIcon size="xs" />
+                </a>
               </Text>
             </Box>
 
