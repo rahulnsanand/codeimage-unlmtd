@@ -48,7 +48,7 @@
     "format:check": "oxfmt --check",
     "typecheck": "pnpm --filter='@codeimage/*' --recursive --parallel typecheck",
     "build:prod": "pnpm libs:build && pnpm --filter=@codeimage/app build",
-    "deploy:pages": "pnpm build:prod && wrangler pages deploy apps/codeimage/dist --project-name codeimageunlmtd",
+    "deploy:pages": "pnpm build:prod && wrangler pages deploy apps/codeimage/dist --project-name codeimageunlmtd --branch main",
     "changeset:pr": "changeset version && tsx scripts/sync-package.ts",
     "pre-commit": "lint-staged --relative",
     "pre-commit-format": "oxfmt",
