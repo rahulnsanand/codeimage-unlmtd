@@ -87,7 +87,7 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
 
               <IconButton
                 as="a"
-                href="https://github.com/rahulnsanand/codeimage-unlmtd"
+                href="https://github.com/lyfie-org/codeimage-unlmtd"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Repository"
@@ -108,7 +108,6 @@ export function Toolbar(props: VoidProps<ToolbarProps>) {
                 <SettingsIcon size="sm" />
               </IconButton>
             </Show>
-
           </HStack>
         </Box>
       </div>

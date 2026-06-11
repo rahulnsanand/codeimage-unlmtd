@@ -42,7 +42,7 @@ export function FrameHandler(
       <div
         class={styles.handler}
         style={
-          // ATTENTION: this is needed to fix autocomplete bug on desktop due to translate. https://github.com/rahulnsanand/codeimage-unlmtd/issues/42
+          // ATTENTION: this is needed to fix autocomplete bug on desktop due to translate. https://github.com/lyfie-org/codeimage-unlmtd/issues/42
           modality === 'full' ? {} : {transform: `scale(${canvasScale()})`}
         }
         ref={setHandlerRef}

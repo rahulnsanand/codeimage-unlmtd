@@ -40,8 +40,8 @@ export function GitHubButton(props: ParentProps<GithubButtonProps>) {
         class={`${styles.linkButton} ${styles.content}`}
         target={'_blank'}
         rel={'noopener'}
-        aria-label={'Star rahulnsanand/codeimage-unlmtd on GitHub'}
-        href={'https://github.com/rahulnsanand/codeimage-unlmtd'}
+        aria-label={'Star lyfie-org/codeimage-unlmtd on GitHub'}
+        href={'https://github.com/lyfie-org/codeimage-unlmtd'}
       >
         <Star width={24} height={24} />
         <span class={styles.text}>Star</span>
@@ -52,7 +52,7 @@ export function GitHubButton(props: ParentProps<GithubButtonProps>) {
         target={'_blank'}
         rel={'noopener'}
         aria-label={`${props.stars} stargazers on GitHub`}
-        href={'https://github.com/rahulnsanand/codeimage-unlmtd/stargazers'}
+        href={'https://github.com/lyfie-org/codeimage-unlmtd/stargazers'}
       >
         <Show
           fallback={<span class={styles.spinner} aria-hidden="true" />}

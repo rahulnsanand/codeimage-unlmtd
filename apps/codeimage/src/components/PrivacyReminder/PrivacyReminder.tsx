@@ -18,7 +18,9 @@ import {CodeImageLogoV2} from '../Icons/CodeImageLogoV2';
 
 export function PrivacyReminder(props: ControlledDialogProps) {
   const modality = useModality();
-  const [dontShowAgain, setDontShowAgain] = createSignal(!!localStorage.getItem('hideWelcomeModal'));
+  const [dontShowAgain, setDontShowAgain] = createSignal(
+    !!localStorage.getItem('hideWelcomeModal'),
+  );
 
   const handleDontShowAgainChange = (checked: boolean) => {
     setDontShowAgain(checked);
@@ -38,62 +40,118 @@ export function PrivacyReminder(props: ControlledDialogProps) {
       }}
     >
       <DialogPanelContent>
-        <Box display="flex" alignItems="center" justifyContent="center" paddingTop={4} style={{ gap: '12px', width: '100%' }}>
-          <Text weight="bold" size="xl">Welcome to</Text>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          paddingTop={4}
+          style={{gap: '12px', width: '100%'}}
+        >
+          <Text weight="bold" size="xl">
+            Welcome to
+          </Text>
           <CodeImageLogoV2 height={28} />
         </Box>
-        <Box display={'flex'} flexDirection={'column'} paddingY={4} style={{ gap: '24px' }}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          paddingY={4}
+          style={{gap: '24px'}}
+        >
           <Box>
-            <Text size="base" style={{ color: "var(--cui-text-muted)" }}>
-              The supercharged, beautifully optimized version of CodeImage. We've stripped out the heavy backend to give you a pure, lightning-fast experience.
+            <Text size="base" style={{color: 'var(--cui-text-muted)'}}>
+              The supercharged, beautifully optimized version of CodeImage.
+              We've stripped out the heavy backend to give you a pure,
+              lightning-fast experience.
             </Text>
           </Box>
-          
-          <div style={{ display: 'grid', "grid-template-columns": modality === 'mobile' ? "1fr" : "1fr 1fr", gap: "24px" }}>
-            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
-              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
-                <Box style={{color: '#3b82f6', display: 'flex'}}><CloudIcon size="lg" /></Box>
+
+          <div
+            style={{
+              display: 'grid',
+              'grid-template-columns':
+                modality === 'mobile' ? '1fr' : '1fr 1fr',
+              gap: '24px',
+            }}
+          >
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#3b82f6', display: 'flex'}}>
+                  <CloudIcon size="lg" />
+                </Box>
                 <Text weight="semibold">100% Serverless</Text>
               </Box>
-              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>No databases, no heavy APIs. Everything runs blazingly fast entirely in your browser.</Text>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                No databases, no heavy APIs. Everything runs blazingly fast
+                entirely in your browser.
+              </Text>
             </Box>
 
-            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
-              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
-                <Box style={{color: '#10b981', display: 'flex'}}><CheckCircle size="lg" /></Box>
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#10b981', display: 'flex'}}>
+                  <CheckCircle size="lg" />
+                </Box>
                 <Text weight="semibold">Privacy First</Text>
               </Box>
-              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>No telemetry, no tracking, and no data collection. Your code stays yours.</Text>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                No telemetry, no tracking, and no data collection. Your code
+                stays yours.
+              </Text>
             </Box>
 
-            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
-              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
-                <Box style={{color: '#8b5cf6', display: 'flex'}}><DownloadIcon size="lg" /></Box>
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#8b5cf6', display: 'flex'}}>
+                  <DownloadIcon size="lg" />
+                </Box>
                 <Text weight="semibold">16x Export Resolution</Text>
               </Box>
-              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Supercharged export options up to 16x multiplier for pixel-perfect social media posts.</Text>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                Supercharged export options up to 16x multiplier for
+                pixel-perfect social media posts.
+              </Text>
             </Box>
 
-            <Box display="flex" flexDirection="column" style={{ gap: '8px' }}>
-              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
-                <Box style={{color: '#f59e0b', display: 'flex'}}><SparklesIcon size="lg" /></Box>
+            <Box display="flex" flexDirection="column" style={{gap: '8px'}}>
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#f59e0b', display: 'flex'}}>
+                  <SparklesIcon size="lg" />
+                </Box>
                 <Text weight="semibold">Uncapped Features</Text>
               </Box>
-              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Free and uncapped. Generate unlimited screenshots without any paywalls or limits.</Text>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                Free and uncapped. Generate unlimited screenshots without any
+                paywalls or limits.
+              </Text>
             </Box>
 
-            <Box display="flex" flexDirection="column" style={{ gap: '8px', 'grid-column': '1 / -1' }}>
-              <Box display="flex" alignItems="center" style={{ gap: '8px' }}>
-                <Box style={{color: '#14b8a6', display: 'flex'}}><CheckCircle size="lg" /></Box>
+            <Box
+              display="flex"
+              flexDirection="column"
+              style={{gap: '8px', 'grid-column': '1 / -1'}}
+            >
+              <Box display="flex" alignItems="center" style={{gap: '8px'}}>
+                <Box style={{color: '#14b8a6', display: 'flex'}}>
+                  <CheckCircle size="lg" />
+                </Box>
                 <Text weight="semibold">Zero Vulnerabilities</Text>
               </Box>
-              <Text size="sm" style={{ color: "var(--cui-text-muted)" }}>Built on a modern stack with no deprecated dependencies and absolutely zero runtime security vulnerabilities.</Text>
+              <Text size="sm" style={{color: 'var(--cui-text-muted)'}}>
+                Built on a modern stack with no deprecated dependencies and
+                absolutely zero runtime security vulnerabilities.
+              </Text>
             </Box>
           </div>
         </Box>
       </DialogPanelContent>
       <DialogPanelFooter>
-        <Box display={'flex'} justifyContent={'spaceBetween'} alignItems={'center'} width="100%">
+        <Box
+          display={'flex'}
+          justifyContent={'spaceBetween'}
+          alignItems={'center'}
+          width="100%"
+        >
           <Checkbox
             size="md"
             label="Don't show this again"
@@ -104,7 +162,7 @@ export function PrivacyReminder(props: ControlledDialogProps) {
             theme={'primary'}
             size="lg"
             onClick={() => props.onOpenChange(false)}
-            style={{ width: modality === 'mobile' ? '100%' : 'auto' }}
+            style={{width: modality === 'mobile' ? '100%' : 'auto'}}
           >
             Start Creating
           </Button>

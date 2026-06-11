@@ -7,7 +7,12 @@ function download(data: string | Blob, fileName: string, mimeType?: string) {
   link.download = fileName;
   const isString = typeof data === 'string';
   const isDataUrl = isString && data.startsWith('data:');
-  const url = isString && !isDataUrl ? URL.createObjectURL(new Blob([data], { type: mimeType })) : isString ? data : URL.createObjectURL(data);
+  const url =
+    isString && !isDataUrl
+      ? URL.createObjectURL(new Blob([data], {type: mimeType}))
+      : isString
+        ? data
+        : URL.createObjectURL(data);
   link.href = url;
   document.body.appendChild(link);
   link.click();

@@ -19,9 +19,7 @@ export default function Footer() {
           <div class={styles.linkRow}>
             <a
               class={`${styles.link} ${styles.onlyDesktopLink}`}
-              href={
-                'https://github.com/rahulnsanand/codeimage-unlmtd'
-              }
+              href={'https://github.com/lyfie-org/codeimage-unlmtd'}
               target={'_blank'}
               rel={'noopener'}
               title="CodeImage UNLMTD"
@@ -30,21 +28,21 @@ export default function Footer() {
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/rahulnsanand/codeimage-unlmtd'}
+              href={'https://github.com/lyfie-org/codeimage-unlmtd'}
               title="GitHub repository"
             >
               GitHub
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/rahulnsanand/codeimage-unlmtd/issues'}
+              href={'https://github.com/lyfie-org/codeimage-unlmtd/issues'}
               title="Issues"
             >
               Issues & Feedback
             </a>
             <a
               class={styles.link}
-              href={'https://github.com/rahulnsanand/codeimage-unlmtd/releases'}
+              href={'https://github.com/lyfie-org/codeimage-unlmtd/releases'}
               title="Releases"
             >
               Releases

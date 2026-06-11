@@ -4,7 +4,7 @@
 
 ## Core Identity & Links
 - **Application URL**: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
-- **GitHub Repository**: [https://github.com/rahulnsanand/codeimage-unlmtd](https://github.com/rahulnsanand/codeimage-unlmtd)
+- **GitHub Repository**: [https://github.com/lyfie-org/codeimage-unlmtd](https://github.com/lyfie-org/codeimage-unlmtd)
 - **License**: MIT License
 
 ## What is CodeImage unlmtd?
@@ -35,7 +35,7 @@ Developers paste their code into the editor, configure visual settings like them
 5. Click "Export" to download a high-resolution PNG or SVG to your device.
 
 ## How to contribute or run locally
-1. Clone the repository: `git clone https://github.com/rahulnsanand/codeimage-unlmtd.git`
+1. Clone the repository: `git clone https://github.com/lyfie-org/codeimage-unlmtd.git`
 2. Install dependencies: `pnpm install`
 3. Run the development server: `pnpm dev`
 4. The application will start locally on `http://localhost:4200`.

@@ -5,9 +5,9 @@
 
   <p><strong>Create elegant, high-definition code screenshots. No limits. No tracking. Pure awesomeness.</strong></p>
 
-  [![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
-  [![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
-  ![License](https://img.shields.io/github/license/riccardoperra/codeimage)
+[![Built with SolidJS](https://img.shields.io/badge/Built%20with-SolidJS-blue)](https://github.com/solidjs/solid)
+[![Built with Vanilla Extract](https://img.shields.io/badge/Built%20with-Vanilla%20Extract-ff69b4)](https://github.com/seek-oss/vanilla-extract)
+![License](https://img.shields.io/github/license/riccardoperra/codeimage)
 
   <p><strong><a href="https://codeimageunlmtd.pages.dev/">🚀 Launch the Web App</a></strong></p>
 </div>
@@ -18,7 +18,7 @@
 
 Welcome to **CodeImage UNLMTD**! This is a supercharged, stripped-down, and beautifully optimized fork of the amazing [CodeImage](https://github.com/riccardoperra/codeimage).
 
-We took an already fantastic tool and asked: *How can we make this lighter, faster, more secure, and completely unrestricted?* Here is what makes this codebase the ultimate version to fork, use, and trust:
+We took an already fantastic tool and asked: _How can we make this lighter, faster, more secure, and completely unrestricted?_ Here is what makes this codebase the ultimate version to fork, use, and trust:
 
 ### 🚀 What Makes It Better?
 
@@ -46,18 +46,21 @@ All the core awesomeness of the original project is still here, untouched and re
 CodeImage UNLMTD is a highly optimized `pnpm` monorepo:
 
 ### Front-End App (`@codeimage/app`)
+
 Built entirely with SolidJS, focusing on extreme performance and minimal footprint:
+
 - [SolidJS](https://github.com/solidjs/solid) — Reactive, blazing fast UI framework
 - [vanilla-extract](https://github.com/seek-oss/vanilla-extract) — Zero-runtime CSS-in-TypeScript
 - [CodeMirror 6](https://codemirror.net/6/) — The extensible code editor powering the core experience
 
 ### Packages
+
 - `@codeimage/ui`: Accessible UI kit for the front-end
 - `@codeimage/dom-export`: Ultra-optimized export engine without artificial caps
 - `@codeimage/highlight`: Custom editor highlighting themes
 - `@codeimage/config`: Shared base configurations
 
-*(Note: The old `@codeimage/api`, `@codeimage/prisma-models`, and authentication packages have been permanently removed for a pure frontend experience!)*
+_(Note: The old `@codeimage/api`, `@codeimage/prisma-models`, and authentication packages have been permanently removed for a pure frontend experience!)_
 
 ---
 
@@ -82,10 +85,10 @@ Open [http://localhost:4200](http://localhost:4200) in your browser and start ca
 
 ## 🏆 Credits
 
-This project wouldn't be possible without the incredible foundation laid by **Riccardo Perra**. 
+This project wouldn't be possible without the incredible foundation laid by **Riccardo Perra**.
 The original CodeImage won the **Best Application** category at [SolidHack 2022](https://hack.solidjs.com).
 
-- Original repository: [github.com/riccardoperra/codeimage](https://github.com/riccardoperra/codeimage)  
+- Original repository: [github.com/riccardoperra/codeimage](https://github.com/riccardoperra/codeimage)
 - Original author: [Riccardo Perra](https://github.com/riccardoperra)
 
 ---

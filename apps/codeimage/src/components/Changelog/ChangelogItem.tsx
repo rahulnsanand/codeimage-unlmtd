@@ -14,7 +14,6 @@ export function ChangelogItem(props: FlowProps<ChangelogItemProps>) {
 
   const tag = () => `v${props.version}`;
 
-
   return (
     <div class={styles.item}>
       <div class={styles.metadata}>
@@ -27,9 +26,7 @@ export function ChangelogItem(props: FlowProps<ChangelogItemProps>) {
           <div class={styles.metadataVersionDate}>{formattedDate()}</div>
         </div>
       </div>
-      <div class={styles.content}>
-        {props.children}
-      </div>
+      <div class={styles.content}>{props.children}</div>
     </div>
   );
 }

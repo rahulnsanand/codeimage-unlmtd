@@ -1,11 +1,21 @@
-export type GetProjectByIdApi = { response: any; request: any };
-export type CreateProjectApi = { response: any; request: any };
-export type UpdateProjectApi = { response: any; request: any };
-export type DeleteProjectApi = { response: any; request: any };
-export type CreatePresetApi = { response: any; request: any };
-export type UpdatePresetApi = { response: any; request: any };
-export type DeletePresetApi = { response: any; request: any };
-export type GetAllPresetApi = { response: any; request: any };
-export type UpdateProjectNameApi = { response: any; request: any };
-export type CloneProjectApi = { response: any; request: any };
-export type GetPresetByIdApi = { response: { data: any, id: string, name: string, createdAt: string, updatedAt: string, version: number }; request: any };
+export type GetProjectByIdApi = {response: any; request: any};
+export type CreateProjectApi = {response: any; request: any};
+export type UpdateProjectApi = {response: any; request: any};
+export type DeleteProjectApi = {response: any; request: any};
+export type CreatePresetApi = {response: any; request: any};
+export type UpdatePresetApi = {response: any; request: any};
+export type DeletePresetApi = {response: any; request: any};
+export type GetAllPresetApi = {response: any; request: any};
+export type UpdateProjectNameApi = {response: any; request: any};
+export type CloneProjectApi = {response: any; request: any};
+export type GetPresetByIdApi = {
+  response: {
+    data: any;
+    id: string;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+    version: number;
+  };
+  request: any;
+};

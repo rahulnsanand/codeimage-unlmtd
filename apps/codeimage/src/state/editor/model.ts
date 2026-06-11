@@ -65,7 +65,6 @@ export type PersistedTerminalState = Pick<
   | 'shadow'
   | 'background'
   | 'textColor'
-
   | 'showGlassReflection'
   | 'opacity'
   | 'alternativeTheme'

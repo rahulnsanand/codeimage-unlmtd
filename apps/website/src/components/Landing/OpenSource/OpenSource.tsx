@@ -70,7 +70,7 @@ export default function OpenSource() {
           </div>
 
           <a
-            href="https://github.com/rahulnsanand/codeimage-unlmtd"
+            href="https://github.com/lyfie-org/codeimage-unlmtd"
             target="_blank"
             rel="noopener"
             class={styles.becomeContributorLink}

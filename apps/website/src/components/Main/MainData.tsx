@@ -5,7 +5,7 @@ export interface MainData {
 }
 
 export const loadMainData = async (): Promise<MainData> => {
-  const repo = await fetch('https://ungh.cc/repos/rahulnsanand/codeimage-unlmtd')
+  const repo = await fetch('https://ungh.cc/repos/lyfie-org/codeimage-unlmtd')
     .then(res => res.json())
     .then(res => res.repo)
     .catch(() => ({stars: '?'}));

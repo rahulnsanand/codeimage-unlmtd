@@ -7,7 +7,7 @@ CodeImage unlmtd is the ultimate open-source tool for developers to beautifully 
 ## Official Links
 
 - **Web Application**: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
-- **GitHub Repository**: [https://github.com/rahulnsanand/codeimage-unlmtd](https://github.com/rahulnsanand/codeimage-unlmtd)
+- **GitHub Repository**: [https://github.com/lyfie-org/codeimage-unlmtd](https://github.com/lyfie-org/codeimage-unlmtd)
 - **Full AI Context**: [https://codeimageunlmtd.pages.dev/llms-full.txt](https://codeimageunlmtd.pages.dev/llms-full.txt)
 
 ## Overview

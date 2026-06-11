@@ -19,9 +19,7 @@ export function EmptyPresetFallback() {
       <EmptyBox />
 
       <VStack spacing={'2'} marginTop={6}>
-        <Text size={'xl'}>
-          No presets
-        </Text>
+        <Text size={'xl'}>No presets</Text>
         <Box marginTop={5}>
           <Button
             size={'md'}

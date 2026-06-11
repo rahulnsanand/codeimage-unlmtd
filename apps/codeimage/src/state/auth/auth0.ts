@@ -2,9 +2,15 @@ export function $auth0State() {
   const getToken = async () => '';
   const loggedIn = () => false;
   const user = () => null;
-  const login = async () => { window.location.href = '/'; };
-  const forceLogin = async () => { window.location.href = '/'; };
-  const signOut = async () => { window.location.href = '/'; };
+  const login = async () => {
+    window.location.href = '/';
+  };
+  const forceLogin = async () => {
+    window.location.href = '/';
+  };
+  const signOut = async () => {
+    window.location.href = '/';
+  };
   const initLogin = async () => {};
 
   return {

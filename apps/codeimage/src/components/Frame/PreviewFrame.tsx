@@ -120,7 +120,6 @@ export function PreviewFrame(props: VoidProps<PreviewFrameProps>) {
             textColor={terminal.textColor}
             showHeader={terminal.showHeader}
             showGlassReflection={terminal.showGlassReflection}
-
             opacity={terminal.opacity}
             alternativeTheme={terminal.alternativeTheme}
             borderType={terminal.borderType}

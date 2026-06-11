@@ -38,8 +38,6 @@ interface VersionStore {
 
 export type FeatureName = 'fontPicker' | 'windowStylePicker' | 'borderType';
 
-
-
 function initialValue(): VersionStore {
   return {
     appVersion: appEnvironment.version,
@@ -104,12 +102,13 @@ export const VersionStore = defineStore<VersionStore>(initialValue)
                 feature.seen[currentVersion] = 0;
               });
             }
-            const hideWelcomeModal = localStorage.getItem('hideWelcomeModal') === 'true';
-            
+            const hideWelcomeModal =
+              localStorage.getItem('hideWelcomeModal') === 'true';
+
             if (!hideWelcomeModal) {
               controlledDialog(PrivacyReminder, {});
             }
-            
+
             if (isFirstTime || hasNewUpdate) {
               const updatedData = updateWithLatestVersionSeen(
                 currentVersion,

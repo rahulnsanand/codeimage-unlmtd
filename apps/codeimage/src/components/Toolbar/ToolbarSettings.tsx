@@ -34,7 +34,6 @@ export function ToolbarSettingsButton() {
         </DropdownMenuTrigger>
         <DropdownMenuPortal>
           <DropdownMenuContent>
-
             <Show when={loggedIn()}>
               <DropdownMenuItem
                 onClick={() => signOut().then(() => navigate('/'))}

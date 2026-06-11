@@ -20,7 +20,12 @@ export function EditorLeftSidebar() {
     <>
       <Sidebar>
         <EditorForm>
-          <Box marginTop={3} display={'flex'} flexDirection={'column'} style={{'row-gap': '12px'}}>
+          <Box
+            marginTop={3}
+            display={'flex'}
+            flexDirection={'column'}
+            style={{'row-gap': '12px'}}
+          >
             <Button
               theme={'secondary'}
               block

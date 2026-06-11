@@ -124,7 +124,6 @@ export const WindowStyleForm: ParentComponent = () => {
         </TwoColumnPanelRow>
       </PanelRow>
 
-
       <PanelRow for={'frameSelectShadow'} label={t('frame.shadow')}>
         <TwoColumnPanelRow>
           <SuspenseEditorItem

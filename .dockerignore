@@ -1,0 +1,25 @@
+# Node modules and build output
+node_modules/
+dist/
+apps/codeimage/dist/
+apps/website/dist/
+.wrangler/
+.turbo/
+.vercel/
+
+# Version control and config
+.git/
+.github/
+.idea/
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local

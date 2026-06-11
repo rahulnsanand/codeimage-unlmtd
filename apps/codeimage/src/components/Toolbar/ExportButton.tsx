@@ -80,7 +80,7 @@ export const ExportButton: Component<ExportButtonProps> = props => {
         size={buttonSize()}
         loading={data.loading}
         leftIcon={<DownloadIcon />}
-        onClick={(e) => {
+        onClick={e => {
           if (e.currentTarget instanceof HTMLElement) {
             e.currentTarget.blur();
           }

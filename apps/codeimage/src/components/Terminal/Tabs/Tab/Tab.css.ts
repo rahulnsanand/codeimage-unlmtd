@@ -117,7 +117,7 @@ export const tab = recipe({
           ),
         },
         /**
-         * ATTENTION: this is a workaround related to https://github.com/rahulnsanand/codeimage-unlmtd/issues/41
+         * ATTENTION: this is a workaround related to https://github.com/lyfie-org/codeimage-unlmtd/issues/41
          *            Flex properties in safari are broken on export with HtmlToImage
          */
         height: `calc(${terminalVars.headerHeight} - ${terminalVars.tabDelta})`,

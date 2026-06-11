@@ -90,7 +90,6 @@ export const ThemeSwitcher: ParentComponent<ThemeSwitcherVariant> = props => {
                           showTab={false}
                           readonlyTab={true}
                           showHeader={false}
-
                           showGlassReflection={
                             terminal.state.showGlassReflection
                           }

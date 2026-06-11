@@ -2,7 +2,12 @@ import {SUPPORTED_LANGUAGES} from '@codeimage/config';
 import {useI18n} from '@codeimage/locale';
 import {getActiveEditorStore} from '@codeimage/store/editor/activeEditor';
 import {HStack, Text, themeVars, VStack} from '@codeimage/ui';
-import {Button, Dialog, DialogPanelContent, DialogPanelFooter} from '@codeui/kit';
+import {
+  Button,
+  Dialog,
+  DialogPanelContent,
+  DialogPanelFooter,
+} from '@codeui/kit';
 import {useModality} from '@core/hooks/isMobile';
 import {DynamicSizedContainer} from '@ui/DynamicSizedContainer/DynamicSizedContainer';
 import type {Component} from 'solid-js';

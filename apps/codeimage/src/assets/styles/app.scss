@@ -21,24 +21,24 @@ body {
 }
 
 /* Override @codeui/kit primary button color to match codeimage theme */
-[class*="Button_button_theme_primary"] {
-    background-color: #f55d00 !important;
-    border-color: #f55d00 !important;
-    color: #fff !important;
+[class*='Button_button_theme_primary'] {
+  background-color: #f55d00 !important;
+  border-color: #f55d00 !important;
+  color: #fff !important;
 }
 
-[class*="Button_button_theme_primary"]:not([data-disabled]):hover {
-    background-color: #ff7b2e !important;
-    border-color: #ff7b2e !important;
+[class*='Button_button_theme_primary']:not([data-disabled]):hover {
+  background-color: #ff7b2e !important;
+  border-color: #ff7b2e !important;
 }
 
-[class*="Button_button_theme_primary"]:not([data-disabled]):active {
-    background-color: #cc4d00 !important;
-    border-color: #cc4d00 !important;
-    transform: scale(0.97);
+[class*='Button_button_theme_primary']:not([data-disabled]):active {
+  background-color: #cc4d00 !important;
+  border-color: #cc4d00 !important;
+  transform: scale(0.97);
 }
 
-[class*="Button_button_theme_primary"]:focus-visible {
-    outline-color: #f55d00 !important;
-    outline: 2px solid #f55d00 !important;
+[class*='Button_button_theme_primary']:focus-visible {
+  outline-color: #f55d00 !important;
+  outline: 2px solid #f55d00 !important;
 }

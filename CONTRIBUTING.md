@@ -27,7 +27,7 @@ pnpm -v
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rahulnsanand/codeimage-unlmtd.git
+git clone https://github.com/lyfie-org/codeimage-unlmtd.git
 cd codeimage-unlmtd
 ```
 
@@ -55,14 +55,14 @@ pnpm dev
 
 The key files involved in image export resolution are:
 
-| File | Role |
-|---|---|
-| `apps/codeimage/src/components/Toolbar/ExportButton.tsx` | Export dialog modal — pixel ratio slider |
-| `apps/codeimage/src/components/Toolbar/ExportContent.tsx` | Settings popover — pixel ratio slider |
-| `apps/codeimage/src/state/canvas.ts` | `ExportCanvasStore` — persisted export settings |
-| `packages/dom-export/src/lib/index.ts` | Core export engine (`toCanvas`, `toPng`, etc.) |
-| `packages/dom-export/src/lib/util.ts` | Canvas dimension helpers and pixel ratio logic |
-| `packages/dom-export/src/lib/options.ts` | `HtmlExportOptions` interface |
+| File                                                      | Role                                            |
+| --------------------------------------------------------- | ----------------------------------------------- |
+| `apps/codeimage/src/components/Toolbar/ExportButton.tsx`  | Export dialog modal — pixel ratio slider        |
+| `apps/codeimage/src/components/Toolbar/ExportContent.tsx` | Settings popover — pixel ratio slider           |
+| `apps/codeimage/src/state/canvas.ts`                      | `ExportCanvasStore` — persisted export settings |
+| `packages/dom-export/src/lib/index.ts`                    | Core export engine (`toCanvas`, `toPng`, etc.)  |
+| `packages/dom-export/src/lib/util.ts`                     | Canvas dimension helpers and pixel ratio logic  |
+| `packages/dom-export/src/lib/options.ts`                  | `HtmlExportOptions` interface                   |
 
 ---
 

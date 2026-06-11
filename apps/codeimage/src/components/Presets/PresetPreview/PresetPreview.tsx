@@ -41,7 +41,6 @@ export function PresetPreview(props: PresetPreviewProps) {
         showHeader={props.data.terminal.showHeader}
         borderType={props.data.terminal.borderType}
         showGlassReflection={props.data.terminal.showGlassReflection}
-
         opacity={props.data.terminal.opacity}
         alternativeTheme={props.data.terminal.alternativeTheme}
         themeId={props.data.editor.themeId}

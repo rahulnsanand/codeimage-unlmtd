@@ -203,5 +203,3 @@ export const resizeLineDivider = style({
   width: '100%',
   transform: 'transformY(50%)',
 });
-
-

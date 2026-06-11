@@ -1,4 +1,3 @@
-
 import {AVAILABLE_TERMINAL_THEMES} from '@core/configuration/terminal-themes';
 
 import type {JSXElement, ParentComponent} from 'solid-js';
@@ -29,8 +28,6 @@ export const DynamicTerminal: ParentComponent<DynamicTerminalProps> = (
   return (
     <Dynamic component={terminal()} {...omitProps(props, ['type'])}>
       {resolvedChildren()}
-
-
     </Dynamic>
   );
 };

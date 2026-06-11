@@ -37,7 +37,6 @@ export function ManagedFrame() {
         textColor={terminal.textColor}
         showHeader={terminal.showHeader}
         showGlassReflection={terminal.showGlassReflection}
-
         opacity={terminal.opacity}
         alternativeTheme={terminal.alternativeTheme}
         borderType={terminal.borderType}

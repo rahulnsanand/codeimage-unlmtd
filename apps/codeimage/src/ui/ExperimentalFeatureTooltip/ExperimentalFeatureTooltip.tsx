@@ -33,11 +33,7 @@ export function ExperimentalFeatureTooltip(
       slotClasses={{
         content: styles.tooltip,
       }}
-      content={
-        <>
-          {props.feature} is an experimental feature.
-        </>
-      }
+      content={<>{props.feature} is an experimental feature.</>}
     >
       {props.children}
     </Tooltip>
