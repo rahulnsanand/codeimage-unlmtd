@@ -1,19 +1,17 @@
-# Contributing
+# 🤝 Contributing
 
-> Thank you for considering contributing to this project. Your help is very much appreciated!
+First off — thanks for being here. Every issue, idea, and PR genuinely helps. 🙌
 
-When contributing, it's better to first discuss the change you wish to make via an issue, discussion, or any other method with the owners of this repository before making a change.
-
-All members of our community are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md). Please make sure you are welcoming and friendly in all of our spaces.
+Got a change in mind? It's usually best to float it first via an issue or discussion before you dive in, so we're on the same page. And while you're around our spaces, please keep things friendly — we follow a simple [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
-## Requirements
+## 📋 What you'll need
 
-- **Node.js** v24 or higher
-- **pnpm** v10 or higher
+- 🟢 **Node.js** v24 or higher
+- 📦 **pnpm** v10 or higher
 
-Check your versions:
+Quick check:
 
 ```bash
 node -v
@@ -22,40 +20,40 @@ pnpm -v
 
 ---
 
-## Run on Your Machine
+## 💻 Get it running
 
-### 1. Clone the repository
+### 1. Clone it
 
 ```bash
 git clone https://github.com/lyfie-org/codeimage-unlmtd.git
 cd codeimage-unlmtd
 ```
 
-### 2. Install dependencies
+### 2. Install deps
 
 ```bash
 pnpm install
 ```
 
-### 3. Start the development server
+### 3. Fire it up
 
-There are no databases, mock APIs, or Docker containers required. Simply build the libs and start the dev server:
+No databases, no mock APIs, no containers needed. Build the libs once, then start the dev server:
 
 ```bash
-pnpm libs:build   # Build dependent libraries first
+pnpm libs:build   # build the local packages first
 pnpm dev
 ```
 
-- Local Front-end: [http://localhost:4200](http://localhost:4200)
-- Live Application: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
+- 🖥️ Local: [http://localhost:4200](http://localhost:4200)
+- 🌐 Live app: [https://codeimageunlmtd.pages.dev/](https://codeimageunlmtd.pages.dev/)
 
 ---
 
-## Working on the 16K Export Feature
+## 🔍 Working on the 16x export feature
 
-The key files involved in image export resolution are:
+This is the headline feature of the fork, so here's a map of where the magic happens:
 
-| File                                                      | Role                                            |
+| File                                                      | What it does                                    |
 | --------------------------------------------------------- | ----------------------------------------------- |
 | `apps/codeimage/src/components/Toolbar/ExportButton.tsx`  | Export dialog modal — pixel ratio slider        |
 | `apps/codeimage/src/components/Toolbar/ExportContent.tsx` | Settings popover — pixel ratio slider           |
@@ -66,9 +64,9 @@ The key files involved in image export resolution are:
 
 ---
 
-## Commit Conventions
+## ✍️ Commit style
 
-This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/):
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/). Keeps the history clean and readable:
 
 ```
 feat(export): increase pixel ratio slider max to 16
@@ -77,9 +75,11 @@ fix(canvas): handle dimension cap at 16384px
 
 ---
 
-## Pull Request Process
+## 🚀 Opening a PR
 
-1. Create a new branch: `git checkout -b feat/my-feature`
-2. Make your changes with appropriate tests where relevant
-3. Commit using Conventional Commits format
-4. Open a pull request with a clear description of what changed and why
+1. Branch off: `git checkout -b feat/my-feature`
+2. Make your changes (add tests where it makes sense)
+3. Commit using the Conventional Commits format above
+4. Open a PR with a clear "what changed and why"
+
+That's it. We'll take it from there. ✨

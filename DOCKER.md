@@ -1,85 +1,91 @@
-# 🐳 Deploying CodeImage UNLMTD with Docker
+# 🐳 Self-Host CodeImage UNLMTD
 
-Run a private, high-performance instance of CodeImage UNLMTD on your own server or workstation in seconds. This deployment is fully containerized, lightweight, and supports all major architectures.
+Want your own private CodeImage instance? Spin one up on your server, your laptop, or a Raspberry Pi in about ten seconds. It's fully containerized, multi-arch, and ridiculously light. Let's go. 👇
 
-## 🚀 Quick Start
+---
 
-To run the application locally on port `8080`, execute:
+## 🚀 Quick start
+
+One command. That's the whole setup.
 
 ```bash
 docker run -d \
   -p 8080:8080 \
   --name codeimage-unlmtd \
   --restart unless-stopped \
-  rahulnsanand/codeimage-unlmtd:latest
+  lyfie/codeimage-unlmtd:latest
 ```
 
-Once running, access the web interface at: **[http://localhost:8080](http://localhost:8080)**
+Now open **[http://localhost:8080](http://localhost:8080)** and you're live. 🎉
 
 ---
 
-## 🏗️ Supported Architectures & System Requirements
+## 🏗️ Runs basically anywhere
 
-We build and distribute multi-architecture images. The container runs natively on:
+We ship multi-architecture images, so the container runs natively on:
 
-- **linux/amd64**: Intel/AMD servers, Cloud VMs, and standard desktop PCs.
-- **linux/arm64**: Apple Silicon Macs (M1/M2/M3/M4), Raspberry Pi 4/5 (64-bit OS), and ARM64 servers (AWS Graviton, etc.).
+- **linux/amd64** — Intel/AMD servers, cloud VMs, regular desktop PCs.
+- **linux/arm64** — Apple Silicon Macs (M1–M4), Raspberry Pi 4/5 (64-bit OS), and ARM servers like AWS Graviton.
 
-### System Requirements
-- **OS**: Windows, macOS, Linux, or Raspberry Pi OS (64-bit).
-- **Prerequisites**: Docker Engine or Docker Desktop installed.
-- **Resources**: Extremely light. Consumes **<10MB of RAM** and negligible CPU under idle.
+**What you need:**
+- 🖥️ Windows, macOS, Linux, or Raspberry Pi OS (64-bit)
+- 🐳 Docker Engine or Docker Desktop
+- 🪶 Almost nothing else — it sips **under 10MB of RAM** at idle and barely touches the CPU.
 
 ---
 
-## 🛠️ Platform-Specific Setup
+## 🛠️ Setup by platform
 
-### 1. Linux & Raspberry Pi
-Ensure Docker is installed and running:
+### Linux & Raspberry Pi
+
+Make sure Docker is up, then run it:
+
 ```bash
-# Verify docker service is active
+# Check docker is alive
 sudo systemctl status docker
 
-# Run CodeImage UNLMTD
-sudo docker run -d -p 8080:8080 --name codeimage-unlmtd rahulnsanand/codeimage-unlmtd:latest
+# Launch CodeImage UNLMTD
+sudo docker run -d -p 8080:8080 --name codeimage-unlmtd lyfie/codeimage-unlmtd:latest
 ```
 
-### 2. macOS & Windows
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and ensure it is running, then execute the quick start command in your terminal/PowerShell:
+### macOS & Windows
+
+Grab [Docker Desktop](https://www.docker.com/products/docker-desktop/), make sure it's running, then drop the quick-start command into your terminal (or PowerShell):
+
 ```powershell
-docker run -d -p 8080:8080 --name codeimage-unlmtd rahulnsanand/codeimage-unlmtd:latest
+docker run -d -p 8080:8080 --name codeimage-unlmtd lyfie/codeimage-unlmtd:latest
 ```
 
 ---
 
-## 📦 Docker Compose Configuration
+## 📦 Prefer Docker Compose?
 
-If you prefer using Docker Compose, create a `docker-compose.yml` file:
+Drop this into a `docker-compose.yml`:
 
 ```yaml
-version: '3.8'
-
 services:
   codeimage:
-    image: rahulnsanand/codeimage-unlmtd:latest
+    image: lyfie/codeimage-unlmtd:latest
     container_name: codeimage-unlmtd
     ports:
-      - "8080:8080"
+      - '8080:8080'
     restart: unless-stopped
 ```
 
-Start the container with:
+Then:
+
 ```bash
-docker compose up -d
-```
-Stop the container with:
-```bash
-docker compose down
+docker compose up -d    # start it
+docker compose down     # stop it
 ```
 
 ---
 
-## 🛡️ Privacy & Safety
-CodeImage UNLMTD is a pure client-side application.
-- **No telemetry/tracking**: All tracking metrics have been permanently removed.
-- **No server communication**: The files and code you import or write inside this editor never leave your browser.
+## 🛡️ The privacy bit
+
+This matters, so it's worth repeating: CodeImage UNLMTD is **100% client-side**.
+
+- 🚫 **No telemetry** — every tracker has been permanently removed.
+- 🔒 **No phoning home** — the code you write or import never leaves your browser. There's no server to send it to.
+
+Self-hosting just makes that guarantee yours to keep. ✨

@@ -155,7 +155,7 @@ export function PrivacyReminder(props: ControlledDialogProps) {
                   Raspberry Pi servers.
                 </span>
                 <a
-                  href="https://github.com/rahulnsanand/codeimage-unlmtd/blob/main/DOCKER.md"
+                  href="https://github.com/lyfie-org/codeimage-unlmtd/blob/main/DOCKER.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
